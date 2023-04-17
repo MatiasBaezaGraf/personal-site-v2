@@ -58,9 +58,9 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					</h1>
 					<p className="font-primary-medium text-[#838383] text-[17px] mt-[10px]">
 						Hello there! I’m a Software Engineer born, raised and based in
-						Argentina. I'm passionate for software development and always
-						willing to learn new ways to do so. Currently developing solutions
-						with <span className="text-gradient">Lightning Team.</span>
+						Argentina. I love software development and I’m always willing to
+						learn new ways to do so. Currently developing solutions with{" "}
+						<span className="text-gradient">Lightning Team.</span>
 					</p>
 					<div className="bg-main-gradient p-[2px] rounded-[3px] w-[200px] h-[64px] mt-[20px]">
 						<button className="bg-[#010010] w-full h-full">
