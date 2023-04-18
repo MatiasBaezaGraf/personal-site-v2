@@ -2,7 +2,7 @@ import Image from "next/image";
 
 const Navbar = () => {
 	return (
-		<nav className="flex flex-row px-[25px] items-center justify-between w-full h-[100px] fixed top-0 z-20">
+		<nav className="flex flex-row px-[25px] items-center justify-between w-full h-[100px] fixed top-0 z-20 bg-transparent backdrop-blur-sm">
 			<Image
 				src="/icons/Logo.png"
 				alt="Logo"

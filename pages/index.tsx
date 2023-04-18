@@ -1,4 +1,5 @@
 import Navbar from "@/components/Navbar";
+import Carousel from "@/components/Carousel";
 import Head from "next/head";
 import Image from "next/image";
 
@@ -41,7 +42,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Navbar />
+			{/* <Navbar /> */}
 			<main className="bg-[#010010]">
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
 				<div className="h-screen flex flex-col justify-center px-[8px]">
@@ -50,7 +51,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					<h4 className="font-primary-medium text-[20px] text-gradient">
 						Welcome! My name is
 					</h4>
-					<h1 className="font-primary-bold text-[#DBDBDB] text-[41px]">
+					<h1 className="font-primary-bold leading-none text-[#DBDBDB] text-[41px] mt-[15px]">
 						Matias Baeza Graf
 					</h1>
 					<h1 className="font-primary-bold text-[#838383] text-[41px]">
@@ -85,14 +86,14 @@ const Home = ({ projects }: { projects: Project[] }) => {
 							className="object-contain [h-25px] w-[25px] mx-[14px]"
 						/>
 						<Image
-							src="/icons/LinkedInIcon.png"
+							src="/icons/TwitterIcon.png"
 							alt="Logo"
 							width={25}
 							height={25}
 							className="object-contain [h-25px] w-[25px] mx-[14px]"
 						/>
 						<Image
-							src="/icons/TwitterIcon.png"
+							src="/icons/LinkedInIcon.png"
 							alt="Logo"
 							width={25}
 							height={25}
@@ -100,6 +101,9 @@ const Home = ({ projects }: { projects: Project[] }) => {
 						/>
 					</div>
 				</div>
+				{/* ------------------------------------------------------------- About ------------------------------------------------------------- */}
+
+				<Carousel />
 			</main>
 		</>
 	);

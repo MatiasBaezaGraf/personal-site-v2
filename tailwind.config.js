@@ -16,6 +16,7 @@ module.exports = {
 			},
 			backgroundImage: {
 				"main-gradient": `linear-gradient(90deg, #FF5400, #FFB800)`,
+				"mobile-landscape": "url('../public/images/MobileLandscape.jpg')",
 			},
 		},
 	},
