@@ -42,7 +42,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			{/* <Navbar /> */}
+			<Navbar />
 			<main className="bg-[#010010]">
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
 				<div className="h-screen flex flex-col justify-center px-[10px]">

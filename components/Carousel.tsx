@@ -17,7 +17,7 @@ const Carousel = () => {
 				{/* --------------------------------------------------------- Slide 1 ---------------------------------------------------------  */}
 				<div className="h-screen w-screen bg-mobile-landscape bg-cover left-0">
 					{/* This div below exists to give a darker background to full screen */}
-					<div className="flex flex-col h-full w-full justify-start bg-[#010010]/70 px-[12px]">
+					<div className="flex flex-col h-full w-full justify-start bg-[#010010]/60 px-[12px]">
 						{/* This div below exists to give a darker background to the texts */}
 						<div className="bg-black/20 h-min mt-[130px] p-[5px] shadow-lg">
 							<p className="font-primary-regular text-[16px] text-[#838383]">
@@ -145,7 +145,9 @@ const Carousel = () => {
 				</div>
 				{/* --------------------------------------------------------- Slide 2 ---------------------------------------------------------  */}
 				<div className="h-screen w-screen bg-mobile-landscape2 bg-cover left-full">
-					<div className="flex flex-col h-full w-full justify-start items-end text-right bg-[#010010]/70 px-[12px]">
+					{/* This div below exists to give a darker background to full screen */}
+					<div className="flex flex-col h-full w-full justify-start items-end text-right bg-[#010010]/60 px-[12px]">
+						{/* This div below exists to give a darker background to the texts */}
 						<div className="bg-black/20 h-min mt-[130px] p-[5px] w-5/6 shadow-lg">
 							<p className="font-primary-regular text-[16px] text-[#838383] ">
 								I love&nbsp;
@@ -176,7 +178,9 @@ const Carousel = () => {
 				</div>
 				{/* --------------------------------------------------------- Slide 3 ---------------------------------------------------------  */}
 				<div className="h-screen w-screen bg-mobile-landscape3 bg-cover left-[200vw]">
-					<div className="flex flex-col h-full w-full justify-start bg-[#010010]/70 px-[12px]">
+					{/* This div below exists to give a darker background to full screen */}
+					<div className="flex flex-col h-full w-full justify-start bg-[#010010]/60 px-[12px]">
+						{/* This div below exists to give a darker background to the texts */}
 						<div className="bg-black/20 h-min mt-[130px] p-[5px] w-5/6 shadow-lg">
 							<p className="font-primary-regular text-[16px] text-[#838383]">
 								Another thing I love is the trips we make with my family. My
