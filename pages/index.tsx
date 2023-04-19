@@ -54,7 +54,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					<h1 className="font-primary-bold leading-none text-[#DBDBDB] text-[41px] mt-[15px]">
 						Matias Baeza Graf
 					</h1>
-					<h1 className="font-primary-bold text-[#838383] text-[41px]">
+					<h1 className="font-primary-bold leading-none text-[#838383] text-[41px] mt-[5px]">
 						Software Engineer
 					</h1>
 					<p className="font-primary-medium text-[#838383] text-[17px] mt-[10px]">
