@@ -45,19 +45,19 @@ const Home = ({ projects }: { projects: Project[] }) => {
 			{/* <Navbar /> */}
 			<main className="bg-[#010010]">
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
-				<div className="h-screen flex flex-col justify-center px-[8px]">
+				<div className="h-screen flex flex-col justify-center px-[10px]">
 					{/* This invisible div exists to center the content. It balances the footer mt-auto with mb-auto */}
 					<div className="mb-auto" />
 					<h4 className="font-primary-medium text-[20px] text-gradient">
 						Welcome! My name is
 					</h4>
-					<h1 className="font-primary-bold leading-none text-[#DBDBDB] text-[41px] mt-[15px]">
+					<h1 className="font-primary-bold leading-none text-[#DBDBDB] text-[40px] mt-[15px]">
 						Matias Baeza Graf
 					</h1>
-					<h1 className="font-primary-bold leading-none text-[#838383] text-[41px] mt-[5px]">
+					<h1 className="font-primary-bold leading-none text-[#838383] text-[40px] mt-[5px]">
 						Software Engineer
 					</h1>
-					<p className="font-primary-medium text-[#838383] text-[17px] mt-[10px]">
+					<p className="font-primary-medium text-[#838383] text-[17px] mt-[20px]">
 						Hello there! I’m a Software Engineer born, raised and based in
 						Argentina. I love software development and I’m always willing to
 						learn new ways to do so. Currently developing solutions with{" "}
