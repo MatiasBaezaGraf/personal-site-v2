@@ -4,6 +4,7 @@ import Head from "next/head";
 import Image from "next/image";
 
 import supabase from "supabase.js";
+import SmallCarousel from "@/components/SmallCarousel";
 
 type Project = {
 	id: string;
@@ -102,8 +103,17 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					</div>
 				</div>
 				{/* ------------------------------------------------------------- About ------------------------------------------------------------- */}
-
+				{/* The whole page is inside the Carousel component because the carousel */}
+				{/* covers the entire screen */}
 				<Carousel />
+				{/* ------------------------------------------------------------- Experience ------------------------------------------------------------- */}
+
+				<div className="h-screen">
+					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[50px] pb-[50px] px-[12px]">
+						My Experience
+					</h1>
+					<SmallCarousel />
+				</div>
 			</main>
 		</>
 	);
