@@ -1,16 +1,17 @@
 import Navbar from "@/components/Navbar";
 import Carousel from "@/components/Carousel";
+import FeaturedProjects from "@/components/FeaturedProjects";
 import Head from "next/head";
 import Image from "next/image";
 
 import supabase from "supabase.js";
 import SmallCarousel from "@/components/SmallCarousel";
 
-type Project = {
+export type Project = {
 	id: string;
 	name: string;
 	description: string;
-	tecnologies: string;
+	technologies: string;
 	imagePath: string;
 	visitUrl: string;
 	githubUrl: string;
@@ -112,7 +113,16 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[50px] pb-[50px] px-[12px]">
 						My Experience
 					</h1>
+					{/* This carousel uses the same logic as the prior one, but it takes a small part of the screen. */}
 					<SmallCarousel />
+				</div>
+
+				{/* ------------------------------------------------------------- Featured Projects ------------------------------------------------------------- */}
+				<div className="px-[12px]">
+					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[50px] pb-[50px]">
+						Featured Projects
+					</h1>
+					<FeaturedProjects projects={projects} />
 				</div>
 			</main>
 		</>
