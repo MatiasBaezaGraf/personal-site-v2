@@ -70,41 +70,51 @@ const Home = ({ projects }: { projects: Project[] }) => {
 						<span className="text-gradient">Lightning Team.</span>
 					</p>
 					<div className="bg-main-gradient p-[2px] rounded-[3px] w-[200px] h-[64px] mt-[20px]">
-						<button className="bg-[#010010] w-full h-full">
-							<h1 className="font-primary-medium text-[15px] text-gradient">
-								Check out my resume!
-							</h1>
-						</button>
+						<a href="CV.pdf" download>
+							<button className="bg-[#010010] w-full h-full">
+								<h1 className="font-primary-medium text-[15px] text-gradient">
+									Check out my resume!
+								</h1>
+							</button>
+						</a>
 					</div>
 					<div className="flex flex-row justify-center mb-[30px] mt-auto">
-						<Image
-							src="/icons/GitHubIcon.png"
-							alt="Logo"
-							width={25}
-							height={25}
-							className="object-contain [h-25px] w-[25px] mx-[14px]"
-						/>
-						<Image
-							src="/icons/InstagramIcon.png"
-							alt="Logo"
-							width={25}
-							height={25}
-							className="object-contain [h-25px] w-[25px] mx-[14px]"
-						/>
-						<Image
-							src="/icons/TwitterIcon.png"
-							alt="Logo"
-							width={25}
-							height={25}
-							className="object-contain [h-25px] w-[25px] mx-[14px]"
-						/>
-						<Image
-							src="/icons/LinkedInIcon.png"
-							alt="Logo"
-							width={25}
-							height={25}
-							className="object-contain [h-25px] w-[25px] mx-[14px]"
-						/>
+						<a href="https://github.com/MatiasBaezaGraf">
+							<Image
+								src="/icons/GitHubIcon.png"
+								alt="Logo"
+								width={25}
+								height={25}
+								className="object-contain [h-25px] w-[25px] mx-[14px]"
+							/>
+						</a>
+						<a href="https://ig.me/m/matibaezagraf">
+							<Image
+								src="/icons/InstagramIcon.png"
+								alt="Logo"
+								width={25}
+								height={25}
+								className="object-contain [h-25px] w-[25px] mx-[14px]"
+							/>
+						</a>
+						<a href="https://twitter.com/matibaezagraf">
+							<Image
+								src="/icons/TwitterIcon.png"
+								alt="Logo"
+								width={25}
+								height={25}
+								className="object-contain [h-25px] w-[25px] mx-[14px]"
+							/>
+						</a>
+						<a href="https://www.linkedin.com/in/matias-baeza-graf-28781a224">
+							<Image
+								src="/icons/LinkedInIcon.png"
+								alt="Logo"
+								width={25}
+								height={25}
+								className="object-contain [h-25px] w-[25px] mx-[14px]"
+							/>
+						</a>
 					</div>
 				</div>
 				{/* ------------------------------------------------------------- About ------------------------------------------------------------- */}

@@ -11,7 +11,7 @@ const OtherProjects = ({ projects }: { projects: Project[] }) => {
 						<div key={project.id} className="relative pb-[20px]">
 							<div className="relative flex flex-col top-0 left-0 w-full h-full z-10 bg-[#030120] border-[#838383] border-[1px] p-[20px]">
 								<div className="flex flex-row justify-between items-center">
-									<h1 className="font-primary-bold text-[#DEDEDE] text-[22px]">
+									<h1 className="font-primary-bold text-[#DEDEDE] text-[22px] w-5/6">
 										{project.name}
 									</h1>
 									{project.visitUrl != null && (
@@ -19,7 +19,7 @@ const OtherProjects = ({ projects }: { projects: Project[] }) => {
 											url={project.visitUrl}
 											purpose="visit"
 											format="small"
-											className="ml-[20px]"
+											className="ml-[5px]"
 										/>
 									)}
 									{project.githubUrl != null && (
