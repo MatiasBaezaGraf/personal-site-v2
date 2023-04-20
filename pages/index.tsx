@@ -1,11 +1,12 @@
-import Navbar from "@/components/Navbar";
-import Carousel from "@/components/Carousel";
-import FeaturedProjects from "@/components/FeaturedProjects";
 import Head from "next/head";
 import Image from "next/image";
-
 import supabase from "supabase.js";
+
+import Navbar from "@/components/Navbar";
 import SmallCarousel from "@/components/SmallCarousel";
+import Carousel from "@/components/Carousel";
+import FeaturedProjects from "@/components/FeaturedProjects";
+import OtherProjects from "@/components/OtherProjects";
 
 export type Project = {
 	id: string;
@@ -48,9 +49,9 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Navbar />
-			<main className="bg-[#010010] snap snap-y snap-mandatory">
+			<main className="bg-[#010010]">
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
-				<div className="h-screen flex flex-col justify-center px-[10px] snap-start">
+				<div className="h-screen flex flex-col justify-center px-[10px]">
 					{/* This invisible div exists to center the content. It balances the footer mt-auto with mb-auto */}
 					<div className="mb-auto" />
 					<h4 className="font-primary-medium text-[20px] text-gradient">
@@ -109,7 +110,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				{/* ------------------------------------------------------------- About ------------------------------------------------------------- */}
 				{/* The whole page is inside the Carousel component because the carousel */}
 				{/* covers the entire screen */}
-				<div className="snap-start">
+				<div>
 					<Carousel />
 				</div>
 				{/* ------------------------------------------------------------- Experience ------------------------------------------------------------- */}
@@ -124,10 +125,40 @@ const Home = ({ projects }: { projects: Project[] }) => {
 
 				{/* ------------------------------------------------------------- Featured Projects ------------------------------------------------------------- */}
 				<div className="px-[12px]">
-					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[50px] pb-[50px]">
+					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[80px] pb-[30px]">
 						Featured Projects
 					</h1>
 					<FeaturedProjects projects={projects} />
+				</div>
+
+				{/* ------------------------------------------------------------- Other Projects ------------------------------------------------------------- */}
+				<div className="px-[12px]">
+					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[80px] pb-[30px]">
+						Other Projects
+					</h1>
+					<OtherProjects projects={projects} />
+				</div>
+				{/* ------------------------------------------------------------- Other Projects ------------------------------------------------------------- */}
+				<div className="h-screen flex flex-col justify-between items-center p-[15px]">
+					<div className="flex flex-col items-center mt-[150px]">
+						<h1 className="font-primary-bold text-[40px] text-[#DEDEDE] pt-[2vh] pb-[30px]">
+							Let’s Get In Touch!
+						</h1>
+						<p className="font-primary-regular text-[19px] leading-[30px] text-[#838383] text-center">
+							Tell me what you have in your mind! I always have time for a new
+							project, idea or simply to chat.
+						</p>
+						<div className="bg-main-gradient p-[2px] rounded-[3px] w-[220px] h-[76px] mt-[20px]">
+							<button className="bg-[#010010] w-full h-full">
+								<h1 className="font-primary-medium text-[22px] text-gradient">
+									Let’s Talk!
+								</h1>
+							</button>
+						</div>
+					</div>
+					<h5 className="font-primary-regular text-[16px] text-[#838383]">
+						Developed by Matias Baeza Graf | 2023
+					</h5>
 				</div>
 			</main>
 		</>
