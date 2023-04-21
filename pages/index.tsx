@@ -82,7 +82,11 @@ const Home = ({ projects }: { projects: Project[] }) => {
 						</a>
 					</div>
 					<div className="flex flex-row justify-center mb-[30px] mt-auto">
-						<a href="https://github.com/MatiasBaezaGraf">
+						<a
+							className="z-20"
+							target="_blank"
+							href="https://github.com/MatiasBaezaGraf"
+						>
 							<Image
 								src="/icons/GitHubIcon.png"
 								alt="Logo"
@@ -91,7 +95,11 @@ const Home = ({ projects }: { projects: Project[] }) => {
 								className="object-contain [h-25px] w-[25px] mx-[14px]"
 							/>
 						</a>
-						<a href="https://ig.me/m/matibaezagraf">
+						<a
+							className="z-20"
+							target="_blank"
+							href="https://ig.me/m/matibaezagraf"
+						>
 							<Image
 								src="/icons/InstagramIcon.png"
 								alt="Logo"
@@ -100,7 +108,11 @@ const Home = ({ projects }: { projects: Project[] }) => {
 								className="object-contain [h-25px] w-[25px] mx-[14px]"
 							/>
 						</a>
-						<a href="https://twitter.com/matibaezagraf">
+						<a
+							className="z-20"
+							target="_blank"
+							href="https://twitter.com/matibaezagraf"
+						>
 							<Image
 								src="/icons/TwitterIcon.png"
 								alt="Logo"
@@ -109,7 +121,12 @@ const Home = ({ projects }: { projects: Project[] }) => {
 								className="object-contain [h-25px] w-[25px] mx-[14px]"
 							/>
 						</a>
-						<a href="https://www.linkedin.com/in/matias-baeza-graf-28781a224">
+
+						<a
+							className="z-20"
+							target="_blank"
+							href="https://www.linkedin.com/in/matias-baeza-graf-28781a224"
+						>
 							<Image
 								src="/icons/LinkedInIcon.png"
 								alt="Logo"
