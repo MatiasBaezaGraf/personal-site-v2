@@ -19,27 +19,24 @@ const Carousel = () => {
 					{/* This div below exists to give a darker background to full screen */}
 					<div className="flex flex-col h-full w-full justify-start bg-[#010010]/60 px-[12px]">
 						{/* This div below exists to give a darker background to the texts */}
-						<div className="bg-black/20 h-min mt-[130px] p-[5px] shadow-lg">
+						<div className="bg-black/20 h-min mt-[160px] p-[5px] shadow-lg">
 							<p className="font-primary-regular text-[16px] text-[#838383]">
 								I was born in Mar del Plata, Argentina in 1999, in a family
-								where english is almost like a second language. Since my
-								childhood I have been attracted to technology. I love video
-								games and always wanted to know how on earth a metal box allowed
-								me to play them. I have always been very curious, and always
-								wanted to understand how things worked.
+								where english is almost like a second language, and since my
+								childhood I have been attracted to technology.
 							</p>
 							<p className="font-primary-regular text-[16px] text-[#838383] pt-[15px]">
-								As I grew up, so did my interest in tech, so I decided to study
+								As I grew up, so did my interest in tech, so I decided to follow
 								a tech-oriented carreer. When I turned 18, I decided to
 								study&nbsp;
-								<span className="text-gradient">Systems Engineering</span>.
+								<span className="text-gradient">Systems Engineering.</span>{" "}
 								During my student years I discovered that what fascinated me the
 								most was software development, especially&nbsp;
 								<span className="text-gradient">web development</span>.
 							</p>
 							<p className="font-primary-regular text-[16px] text-[#838383] pt-[15px]">
-								On top of that, becoming an Engineer endowed me with several
-								soft skills. My goal is to keep learning and growing to become a
+								Becoming an Engineer endowed me with several soft skills.
+								However, my goal is to keep learning and growing to become a
 								great professional and even better human being.
 							</p>
 							<p className="font-primary-regular text-[16px] text-[#838383] pt-[15px]">
@@ -148,7 +145,7 @@ const Carousel = () => {
 					{/* This div below exists to give a darker background to full screen */}
 					<div className="flex flex-col h-full w-full justify-start items-end text-right bg-[#010010]/60 px-[12px]">
 						{/* This div below exists to give a darker background to the texts */}
-						<div className="bg-black/20 h-min mt-[130px] p-[5px] w-5/6 shadow-lg">
+						<div className="bg-black/20 h-min mt-[160px] p-[5px] w-5/6 shadow-lg">
 							<p className="font-primary-regular text-[16px] text-[#838383] ">
 								I love&nbsp;
 								<span className="text-gradient">learning new technologies</span>
@@ -169,10 +166,6 @@ const Carousel = () => {
 								just a walk, and if I find myself in a mountainous area, I love
 								hiking.
 							</p>
-							<p className="font-primary-regular text-[16px] text-[#838383] pt-[15px]">
-								It is ironic that, as a Software Engineer and developer, I
-								simply cannot sit still for long periods of time.
-							</p>
 						</div>
 					</div>
 				</div>
@@ -181,7 +174,7 @@ const Carousel = () => {
 					{/* This div below exists to give a darker background to full screen */}
 					<div className="flex flex-col h-full w-full justify-start bg-[#010010]/60 px-[12px]">
 						{/* This div below exists to give a darker background to the texts */}
-						<div className="bg-black/20 h-min mt-[130px] p-[5px] w-5/6 shadow-lg">
+						<div className="bg-black/20 h-min mt-[160px] p-[5px] w-5/6 shadow-lg">
 							<p className="font-primary-regular text-[16px] text-[#838383]">
 								Another thing I love is the trips we make with my family. My
 								parents, my two brothers and I, love traveling to the Patagonia,
@@ -208,7 +201,7 @@ const Carousel = () => {
                 ${currentTranslationInVW == 200 && "translate-x-[50vw]"}
                 `}
 			>
-				<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] mt-[50px] ">
+				<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] mt-[90px] ">
 					About Me
 				</h1>
 			</div>

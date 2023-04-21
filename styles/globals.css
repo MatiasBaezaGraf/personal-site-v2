@@ -33,6 +33,12 @@ body::-webkit-scrollbar {
 	}
 }
 
+@layer base {
+	html {
+		@apply scroll-smooth;
+	}
+}
+
 @layer utilities {
 	.snap {
 		scroll-snap-type: var(--scroll-snap-direction) var(--scroll-snap-constraint);

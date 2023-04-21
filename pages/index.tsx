@@ -51,7 +51,10 @@ const Home = ({ projects }: { projects: Project[] }) => {
 			<Navbar />
 			<main className="bg-[#010010]">
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
-				<div className="h-screen flex flex-col justify-center px-[10px]">
+				<div
+					id="home"
+					className="h-screen flex flex-col justify-center px-[10px]"
+				>
 					{/* This invisible div exists to center the content. It balances the footer mt-auto with mb-auto */}
 					<div className="mb-auto" />
 					<h4 className="font-primary-medium text-[20px] text-gradient">
@@ -120,13 +123,13 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				{/* ------------------------------------------------------------- About ------------------------------------------------------------- */}
 				{/* The whole page is inside the Carousel component because the carousel */}
 				{/* covers the entire screen */}
-				<div>
+				<div id="about">
 					<Carousel />
 				</div>
 				{/* ------------------------------------------------------------- Experience ------------------------------------------------------------- */}
 
-				<div className="h-screen">
-					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[50px] pb-[50px] px-[12px]">
+				<div id="experience" className="h-screen">
+					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[90px] pb-[50px] px-[12px]">
 						My Experience
 					</h1>
 					{/* This carousel uses the same logic as the prior one, but it takes a small part of the screen. */}
@@ -134,8 +137,8 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				</div>
 
 				{/* ------------------------------------------------------------- Featured Projects ------------------------------------------------------------- */}
-				<div className="px-[12px]">
-					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[80px] pb-[30px]">
+				<div id="work" className="px-[12px]">
+					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[90px] pb-[30px]">
 						Featured Projects
 					</h1>
 					<FeaturedProjects projects={projects} />
@@ -148,8 +151,11 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					</h1>
 					<OtherProjects projects={projects} />
 				</div>
-				{/* ------------------------------------------------------------- Other Projects ------------------------------------------------------------- */}
-				<div className="h-screen flex flex-col justify-between items-center p-[15px]">
+				{/* ------------------------------------------------------------- Contact ------------------------------------------------------------- */}
+				<div
+					id="contact"
+					className="h-screen flex flex-col justify-between items-center p-[15px]"
+				>
 					<div className="flex flex-col items-center mt-[150px]">
 						<h1 className="font-primary-bold text-[40px] text-[#DEDEDE] pt-[2vh] pb-[30px]">
 							Let’s Get In Touch!
@@ -159,11 +165,13 @@ const Home = ({ projects }: { projects: Project[] }) => {
 							project, idea or simply to chat.
 						</p>
 						<div className="bg-main-gradient p-[2px] rounded-[3px] w-[220px] h-[76px] mt-[20px]">
-							<button className="bg-[#010010] w-full h-full">
-								<h1 className="font-primary-medium text-[22px] text-gradient">
-									Let’s Talk!
-								</h1>
-							</button>
+							<a href="mailto:matiasbaezagraf@gmail.com">
+								<button className="bg-[#010010] w-full h-full">
+									<h1 className="font-primary-medium text-[22px] text-gradient">
+										Let’s Talk!
+									</h1>
+								</button>
+							</a>
 						</div>
 					</div>
 					<h5 className="font-primary-regular text-[16px] text-[#838383]">
