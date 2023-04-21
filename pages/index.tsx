@@ -53,17 +53,19 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
 				<div
 					id="home"
-					className="h-screen flex flex-col justify-center px-[10px]"
+					className="h-screen flex flex-col justify-center 
+					px-[10px]
+					tablet:px-[100px]"
 				>
 					{/* This invisible div exists to center the content. It balances the footer mt-auto with mb-auto */}
 					<div className="mb-auto" />
 					<h4 className="font-primary-medium text-[20px] text-gradient">
 						Welcome! My name is
 					</h4>
-					<h1 className="font-primary-bold leading-none text-[#DBDBDB] text-[40px] mt-[15px]">
+					<h1 className="font-primary-bold leading-none text-[#DBDBDB]  mt-[15px] text-[40px] tablet:text-[60px]">
 						Matias Baeza Graf
 					</h1>
-					<h1 className="font-primary-bold leading-none text-[#838383] text-[40px] mt-[5px]">
+					<h1 className="font-primary-bold leading-none text-[#838383]  mt-[5px] text-[40px] tablet:text-[60px]">
 						Software Engineer
 					</h1>
 					<p className="font-primary-medium text-[#838383] text-[17px] mt-[20px]">

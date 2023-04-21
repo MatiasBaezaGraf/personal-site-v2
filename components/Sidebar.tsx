@@ -9,9 +9,9 @@ const Sidebar = (props: { open: boolean; onClose: () => void }) => {
 	return (
 		<>
 			<div
-				className={`tablet:hidden transform duration-[800ms] w-2/3 right-0 fixed h-screen bg-[#04021b] z-20 ${
+				className={`transform duration-[800ms] right-0 fixed h-screen bg-[#04021b] z-20 ${
 					props.open ? "translate-x-0" : "translate-x-[700px]"
-				}`}
+				}  w-2/3 tablet:w-1/3`}
 			>
 				{/* Close sidebar button svg */}
 				<div className="w-full flex flex-row items-center h-[72px]">
@@ -21,7 +21,7 @@ const Sidebar = (props: { open: boolean; onClose: () => void }) => {
 					>
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-[30px] w-[30px] text-stone-200 tablet:hidden"
+							className="h-[30px] w-[30px] text-stone-200 "
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"
@@ -39,7 +39,7 @@ const Sidebar = (props: { open: boolean; onClose: () => void }) => {
 					<a
 						onClick={props.onClose}
 						href="#about"
-						className="flex flex-row justify-start items-center bg-transparent w-full pl-[20px] py-[20px] text-[#838383] font-primary-medium text-[19px] tablet:hidden"
+						className="flex flex-row justify-start items-center bg-transparent w-full pl-[20px] py-[20px] text-[#838383] font-primary-medium text-[19px] "
 					>
 						<Image
 							className="h-[10px] w-[10px] mr-[12px]"
@@ -53,7 +53,7 @@ const Sidebar = (props: { open: boolean; onClose: () => void }) => {
 					<a
 						onClick={props.onClose}
 						href="#experience"
-						className="flex flex-row justify-start items-center bg-transparent w-full pl-[20px] py-[20px] text-[#838383] font-primary-medium text-[19px] tablet:hidden"
+						className="flex flex-row justify-start items-center bg-transparent w-full pl-[20px] py-[20px] text-[#838383] font-primary-medium text-[19px]"
 					>
 						<Image
 							className="h-[10px] w-[10px] mr-[12px]"
@@ -67,7 +67,7 @@ const Sidebar = (props: { open: boolean; onClose: () => void }) => {
 					<a
 						onClick={props.onClose}
 						href="#work"
-						className="flex flex-row justify-start items-center bg-transparent w-full pl-[20px] py-[20px] text-[#838383] font-primary-medium text-[19px] tablet:hidden"
+						className="flex flex-row justify-start items-center bg-transparent w-full pl-[20px] py-[20px] text-[#838383] font-primary-medium text-[19px]"
 					>
 						<Image
 							className="h-[10px] w-[10px] mr-[12px]"
@@ -81,7 +81,7 @@ const Sidebar = (props: { open: boolean; onClose: () => void }) => {
 					<a
 						onClick={props.onClose}
 						href="#contact"
-						className="flex flex-row justify-start items-center bg-transparent w-full pl-[20px] py-[20px] text-[#838383] font-primary-medium text-[19px] tablet:hidden"
+						className="flex flex-row justify-start items-center bg-transparent w-full pl-[20px] py-[20px] text-[#838383] font-primary-medium text-[19px]"
 					>
 						<Image
 							className="h-[10px] w-[10px] mr-[12px]"
