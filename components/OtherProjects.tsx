@@ -4,11 +4,11 @@ import ProjectButton from "@/components/ProjectButton";
 
 const OtherProjects = ({ projects }: { projects: Project[] }) => {
 	return (
-		<>
+		<div className="grid grid-cols-2">
 			{projects.map(
 				(project, index) =>
 					!project.featured && (
-						<div key={project.id} className="relative pb-[20px]">
+						<div key={project.id} className="relative pb-[20px] px-[10px]">
 							<div className="relative flex flex-col top-0 left-0 w-full h-full z-10 bg-[#030120] border-[#838383] border-[1px] p-[20px]">
 								<div className="flex flex-row justify-between items-center">
 									<h1 className="font-primary-bold text-[#DEDEDE] text-[22px] w-5/6">
@@ -41,7 +41,7 @@ const OtherProjects = ({ projects }: { projects: Project[] }) => {
 						</div>
 					)
 			)}
-		</>
+		</div>
 	);
 };
 

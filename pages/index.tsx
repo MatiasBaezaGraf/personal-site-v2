@@ -148,7 +148,12 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				{/* ------------------------------------------------------------- Experience ------------------------------------------------------------- */}
 
 				<div id="experience" className="h-screen">
-					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[90px] pb-[50px] px-[12px]">
+					<h1
+						className="font-primary-bold text-[#DEDEDE] pt-[90px] pb-[50px] 
+						px-[12px] text-[36px]
+						tablet:px-[100px] tablet:text-[48px]
+					"
+					>
 						My Experience
 					</h1>
 					{/* This carousel uses the same logic as the prior one, but it takes a small part of the screen. */}
@@ -156,16 +161,35 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				</div>
 
 				{/* ------------------------------------------------------------- Featured Projects ------------------------------------------------------------- */}
-				<div id="work" className="px-[12px]">
-					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[90px] pb-[30px]">
+				<div
+					id="work"
+					className="
+					px-[12px] 
+					tablet:px-[100px]"
+				>
+					<h1
+						className="font-primary-bold text-[#DEDEDE] pt-[90px] pb-[30px]
+						text-[36px]
+						tablet:text-[48px]
+					"
+					>
 						Featured Projects
 					</h1>
 					<FeaturedProjects projects={projects} />
 				</div>
 
 				{/* ------------------------------------------------------------- Other Projects ------------------------------------------------------------- */}
-				<div className="px-[12px]">
-					<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] pt-[80px] pb-[30px]">
+				<div
+					className="
+					px-[12px] 
+					tablet:px-[80px]"
+				>
+					<h1
+						className="font-primary-bold text-[#DEDEDE] pt-[80px] pb-[30px]
+						text-[36px]
+						tablet:text-[48px]
+					"
+					>
 						Other Projects
 					</h1>
 					<OtherProjects projects={projects} />
@@ -173,13 +197,19 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				{/* ------------------------------------------------------------- Contact ------------------------------------------------------------- */}
 				<div
 					id="contact"
-					className="h-screen flex flex-col justify-between items-center p-[15px]"
+					className="h-screen flex flex-col justify-between items-center py-[15px] 
+					px-[15px]
+					tablet:px-[100px]"
 				>
 					<div className="flex flex-col items-center mt-[150px]">
-						<h1 className="font-primary-bold text-[40px] text-[#DEDEDE] pt-[2vh] pb-[30px]">
+						<h1
+							className="font-primary-bold text-[#DEDEDE] pt-[2vh] pb-[30px]
+							text-[40px]
+							tablet:text-[56px]"
+						>
 							Let’s Get In Touch!
 						</h1>
-						<p className="font-primary-regular text-[19px] leading-[30px] text-[#838383] text-center">
+						<p className="font-primary-regular text-[19px] leading-[30px] text-[#838383] text-center pb-[20px]">
 							Tell me what you have in your mind! I always have time for a new
 							project, idea or simply to chat.
 						</p>

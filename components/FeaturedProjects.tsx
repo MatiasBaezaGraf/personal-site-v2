@@ -25,22 +25,28 @@ const FeaturedProjects = ({ projects }: { projects: Project[] }) => {
 								<p className="font-primary-medium text-[#838383] text-[19px] leading-[30px] mt-[20px]">
 									{project.description}
 								</p>
-								{project.visitUrl != null && (
-									<ProjectButton
-										url={project.visitUrl}
-										purpose="visit"
-										format="large"
-										className="mt-[20px]"
-									/>
-								)}
-								{project.githubUrl != null && (
-									<ProjectButton
-										url={project.githubUrl}
-										purpose="github"
-										format="large"
-										className="mt-[20px]"
-									/>
-								)}
+								<div
+									className="flex 
+								flex-col
+								tablet:flex-row"
+								>
+									{project.visitUrl != null && (
+										<ProjectButton
+											url={project.visitUrl}
+											purpose="visit"
+											format="large"
+											className="mt-[20px] tablet:mr-[10px]"
+										/>
+									)}
+									{project.githubUrl != null && (
+										<ProjectButton
+											url={project.githubUrl}
+											purpose="github"
+											format="large"
+											className="mt-[20px]"
+										/>
+									)}
+								</div>
 							</div>
 						</div>
 					)

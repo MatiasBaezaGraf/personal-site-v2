@@ -15,7 +15,12 @@ const SmallCarousel = () => {
                 `}
 			>
 				{/* -------------------------------- Slide 1 - Lightning Team -------------------------------- */}
-				<div className="flex flex-col w-screen bg-cover left-0 px-[12px]">
+				<div
+					className="flex flex-col w-screen bg-cover left-0 
+					px-[12px]
+					tablet:px-[100px]
+				"
+				>
 					<h1 className="text-[23px]">
 						<span className="font-primary-semi-bold text-[#DEDEDE]">
 							Software Engineer
@@ -81,7 +86,11 @@ const SmallCarousel = () => {
 					</button>
 				</div>
 				{/* -------------------------------- Slide 2 - Universidad Adventista del Plata -------------------------------- */}
-				<div className="flex flex-col w-screen bg-cover left-full px-[12px]">
+				<div
+					className="flex flex-col w-screen bg-cover left-full 
+					px-[12px]
+					tablet:px-[100px]"
+				>
 					<h1 className="text-[23px]">
 						<span className="font-primary-semi-bold text-[#DEDEDE]">
 							Fullstack Developer
@@ -153,7 +162,11 @@ const SmallCarousel = () => {
 					</div>
 				</div>
 				{/* -------------------------------- Slide 3 - Freelance -------------------------------- */}
-				<div className="flex flex-col w-screen bg-cover left-[200vw] px-[12px]">
+				<div
+					className="flex flex-col w-screen bg-cover left-[200vw] 
+					px-[12px]
+					tablet:px-[100px]"
+				>
 					<h1 className="text-[23px]">
 						<span className="font-primary-semi-bold text-[#DEDEDE]">
 							Fullstack Developer
