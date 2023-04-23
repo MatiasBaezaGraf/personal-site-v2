@@ -1,6 +1,5 @@
-import Image from "next/image";
 import { Project } from "@/pages";
-import ProjectButton from "@/components/ProjectButton";
+import ProjectButton from "@/components/design/ProjectButton";
 
 const OtherProjects = ({ projects }: { projects: Project[] }) => {
 	return (

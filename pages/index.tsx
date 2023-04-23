@@ -2,11 +2,12 @@ import Head from "next/head";
 import Image from "next/image";
 import supabase from "supabase.js";
 
-import Navbar from "@/components/Navbar";
-import SmallCarousel from "@/components/SmallCarousel";
-import Carousel from "@/components/Carousel";
-import FeaturedProjects from "@/components/FeaturedProjects";
-import OtherProjects from "@/components/OtherProjects";
+import Navbar from "@/components/design/Navbar";
+
+import SmallCarousel from "@/components/page/SmallCarousel";
+import Carousel from "@/components/page/Carousel";
+import FeaturedProjects from "@/components/page/FeaturedProjects";
+import OtherProjects from "@/components/page/OtherProjects";
 
 export type Project = {
 	id: string;
