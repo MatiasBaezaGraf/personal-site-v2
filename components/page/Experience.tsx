@@ -1,26 +1,96 @@
 import { useState } from "react";
+
 import Image from "next/image";
 
-const SmallCarousel = () => {
-	const [currentTranslationInVW, setcurrentTranslationInVW] = useState(0);
+const Experience = () => {
+	const [selectedExperience, setSelectedExperience] = useState(0);
 
 	return (
-		<div className="laptop:hidden relative overflow-hidden">
-			<div
-				className={`transform duration-[500ms] flex flex-row w-[300vw]
-                ${currentTranslationInVW == 0 && "translate-x-0"}
-                ${currentTranslationInVW == 100 && "translate-x-[-100vw]"}
-                ${currentTranslationInVW == 200 && "translate-x-[-200vw]"}
-                
-                `}
-			>
-				{/* -------------------------------- Slide 1 - Lightning Team -------------------------------- */}
+		<div className="hidden laptop:flex flex-row h-[400px] w-full px-[22vw]">
+			{/* Experience Selector */}
+			<div className="flex flex-col border-r-[1px] border-[#838383] h-full w-2/5">
+				<div className="flex flex-row">
+					<Image
+						src="/icons/Bullet.png"
+						alt="Bullet"
+						width={20}
+						height={20}
+						className={`object-contain [h-20px] w-[20px] mx-[14px] ${
+							selectedExperience == 0 ? "opacity-100" : "opacity-0"
+						}`}
+					/>
+					<button
+						onClick={() => setSelectedExperience(0)}
+						className={`py-[15px] pl-[20px] text-left w-full ${
+							selectedExperience == 0 && "bg-[#D9D9D9]/20"
+						}`}
+					>
+						<h1
+							className={`font-primary-medium text-[17px] ${
+								selectedExperience == 0 ? "text-gradient " : "text-[#838383]"
+							}`}
+						>
+							Lightning Team
+						</h1>
+					</button>
+				</div>
+				<div className="flex flex-row">
+					<Image
+						src="/icons/Bullet.png"
+						alt="Bullet"
+						width={20}
+						height={20}
+						className={`object-contain [h-20px] w-[20px] mx-[14px] ${
+							selectedExperience == 1 ? "opacity-100" : "opacity-0"
+						}`}
+					/>
+					<button
+						onClick={() => setSelectedExperience(1)}
+						className={`py-[15px] pl-[20px] text-left w-full ${
+							selectedExperience == 1 && "bg-[#D9D9D9]/20"
+						}`}
+					>
+						<h1
+							className={`font-primary-medium text-[17px] ${
+								selectedExperience == 1 ? "text-gradient" : "text-[#838383]"
+							}`}
+						>
+							Universidad Advenitsta del Plata
+						</h1>
+					</button>
+				</div>
+				<div className="flex flex-row">
+					<Image
+						src="/icons/Bullet.png"
+						alt="Bullet"
+						width={20}
+						height={20}
+						className={`object-contain [h-20px] w-[20px] mx-[14px] ${
+							selectedExperience == 2 ? "opacity-100" : "opacity-0"
+						}`}
+					/>
+					<button
+						onClick={() => setSelectedExperience(2)}
+						className={`py-[15px] pl-[20px] text-left w-full ${
+							selectedExperience == 2 && "bg-[#D9D9D9]/20"
+						}`}
+					>
+						<h1
+							className={`font-primary-medium text-[17px] ${
+								selectedExperience == 2 ? "text-gradient" : "text-[#838383]"
+							}`}
+						>
+							Freelance
+						</h1>
+					</button>
+				</div>
+			</div>
+			{/* Experience Content */}
+			<div className="relative h-full w-3/5">
 				<div
-					className="flex flex-col w-screen bg-cover left-0 
-					px-[12px]
-					tablet:px-[100px]
-					
-				"
+					className={`absolute flex flex-col py-[10px] px-[40px] ${
+						selectedExperience == 0 ? "opacity-100" : "opacity-0"
+					}`}
 				>
 					<h1 className="text-[23px]">
 						<span className="font-primary-semi-bold text-[#DEDEDE]">
@@ -29,10 +99,6 @@ const SmallCarousel = () => {
 						<span className="font-primary-regular text-[#838383]">and</span>{" "}
 						<span className="font-primary-semi-bold text-[#DEDEDE]">
 							Developer
-						</span>{" "}
-						<span className="font-primary-regular text-[#838383]">@</span>{" "}
-						<span className="font-primary-semi-bold text-gradient">
-							Lightning Team
 						</span>{" "}
 					</h1>
 					<h5 className="font-primary-reguar text-[13px] text-[#838383]">
@@ -73,34 +139,16 @@ const SmallCarousel = () => {
 							with a multi-disciplinary team.
 						</p>
 					</div>
-					<button
-						className="self-end"
-						onClick={() => setcurrentTranslationInVW(100)}
-					>
-						<Image
-							className="h-[30px] w-[30px] mr-[5px] mt-[10px]"
-							src="/icons/Next.png"
-							alt="Velo by Wix"
-							width={30}
-							height={30}
-						/>
-					</button>
 				</div>
-				{/* -------------------------------- Slide 2 - Universidad Adventista del Plata -------------------------------- */}
 				<div
-					className="flex flex-col w-screen bg-cover left-full 
-					px-[12px]
-					tablet:px-[100px]
-					"
+					className={`absolute flex flex-col py-[10px] px-[40px] ${
+						selectedExperience == 1 ? "opacity-100" : "opacity-0"
+					}`}
 				>
 					<h1 className="text-[23px]">
 						<span className="font-primary-semi-bold text-[#DEDEDE]">
 							Fullstack Developer
-						</span>{" "}
-						<span className="font-primary-regular text-[#838383]">@</span>{" "}
-						<span className="font-primary-semi-bold text-gradient">
-							Universidad Adventista del Plata
-						</span>{" "}
+						</span>
 					</h1>
 					<h5 className="font-primary-reguar text-[13px] text-[#838383] self-start">
 						Apr 2022 - Apr 2023
@@ -142,41 +190,16 @@ const SmallCarousel = () => {
 							issues.
 						</p>
 					</div>
-					<div className="flex flex-row justify-between">
-						<button onClick={() => setcurrentTranslationInVW(0)}>
-							<Image
-								className="h-[30px] w-[30px] mr-[5px] mt-[10px]"
-								src="/icons/Prev.png"
-								alt="Velo by Wix"
-								width={30}
-								height={30}
-							/>
-						</button>
-						<button onClick={() => setcurrentTranslationInVW(200)}>
-							<Image
-								className="h-[30px] w-[30px] mr-[5px] mt-[10px]"
-								src="/icons/Next.png"
-								alt="Velo by Wix"
-								width={30}
-								height={30}
-							/>
-						</button>
-					</div>
 				</div>
-				{/* -------------------------------- Slide 3 - Freelance -------------------------------- */}
 				<div
-					className="flex flex-col w-screen bg-cover left-[200vw] 
-					px-[12px]
-					tablet:px-[100px]
-					"
+					className={`absolute flex flex-col py-[10px] px-[40px] ${
+						selectedExperience == 2 ? "opacity-100" : "opacity-0"
+					}`}
 				>
 					<h1 className="text-[23px]">
 						<span className="font-primary-semi-bold text-[#DEDEDE]">
 							Fullstack Developer
-						</span>{" "}
-						<span className="font-primary-semi-bold text-gradient">
-							By Myself
-						</span>{" "}
+						</span>
 					</h1>
 					<div className="mt-[20px]">
 						<p className="font-primary-medium text-[#838383] text-[17px] leading-[30px] pb-[12px] flex flex-row items-start">
@@ -201,19 +224,10 @@ const SmallCarousel = () => {
 							Among those apps, I developed my two personal sites.
 						</p>
 					</div>
-					<button onClick={() => setcurrentTranslationInVW(100)}>
-						<Image
-							className="h-[30px] w-[30px] mr-[5px] mt-[10px]"
-							src="/icons/Prev.png"
-							alt="Velo by Wix"
-							width={30}
-							height={30}
-						/>
-					</button>
 				</div>
 			</div>
 		</div>
 	);
 };
 
-export default SmallCarousel;
+export default Experience;

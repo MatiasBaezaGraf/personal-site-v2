@@ -8,6 +8,8 @@ import SmallCarousel from "@/components/page/SmallCarousel";
 import Carousel from "@/components/page/Carousel";
 import FeaturedProjects from "@/components/page/FeaturedProjects";
 import OtherProjects from "@/components/page/OtherProjects";
+import Decoration from "@/components/design/Decoration";
+import Experience from "@/components/page/Experience";
 
 export type Project = {
 	id: string;
@@ -50,13 +52,22 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Navbar />
+			<Decoration />
+			<Image
+				src="/icons/EmailIcon.png"
+				alt="Logo"
+				width={64}
+				height={64}
+				className="hidden laptop:block fixed bottom-0 left-0 [h-64px] w-[64px] mx-[25px] mb-[15px] z-20"
+			/>
 			<main className="bg-[#010010]">
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
 				<div
 					id="home"
 					className="h-screen flex flex-col justify-center 
 					px-[10px]
-					tablet:px-[100px]"
+					tablet:px-[100px]
+					laptop:px-[25vw]"
 				>
 					{/* This invisible div exists to center the content. It balances the footer mt-auto with mb-auto */}
 					<div className="mb-auto" />
@@ -69,15 +80,15 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					<h1 className="font-primary-bold leading-none text-[#838383]  mt-[5px] text-[40px] tablet:text-[60px]">
 						Software Engineer
 					</h1>
-					<p className="font-primary-medium text-[#838383] text-[17px] mt-[20px]">
+					<p className="font-primary-medium text-[#838383] text-[17px] leading-[30px] mt-[20px] laptop:w-2/3">
 						Hello there! I’m a Software Engineer born, raised and based in
 						Argentina. I love software development and I’m always willing to
 						learn new ways to do so. Currently developing solutions with{" "}
 						<span className="text-gradient">Lightning Team.</span>
 					</p>
 					<div className="bg-main-gradient p-[2px] rounded-[3px] w-[200px] h-[64px] mt-[20px]">
-						<a href="CV.pdf" download>
-							<button className="bg-[#010010] w-full h-full">
+						<a href="CV.pdf" download className="z-20">
+							<button className="bg-[#010010] w-full h-full ">
 								<h1 className="font-primary-medium text-[15px] text-gradient">
 									Check out my resume!
 								</h1>
@@ -86,7 +97,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					</div>
 					<div className="flex flex-row justify-center mb-[30px] mt-auto">
 						<a
-							className="z-20"
+							className="z-20 laptop:hidden"
 							target="_blank"
 							href="https://github.com/MatiasBaezaGraf"
 						>
@@ -99,7 +110,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 							/>
 						</a>
 						<a
-							className="z-20"
+							className="z-20 laptop:hidden"
 							target="_blank"
 							href="https://ig.me/m/matibaezagraf"
 						>
@@ -112,7 +123,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 							/>
 						</a>
 						<a
-							className="z-20"
+							className="z-20 laptop:hidden"
 							target="_blank"
 							href="https://twitter.com/matibaezagraf"
 						>
@@ -126,7 +137,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 						</a>
 
 						<a
-							className="z-20"
+							className="z-20 laptop:hidden"
 							target="_blank"
 							href="https://www.linkedin.com/in/matias-baeza-graf-28781a224"
 						>
@@ -153,12 +164,14 @@ const Home = ({ projects }: { projects: Project[] }) => {
 						className="font-primary-bold text-[#DEDEDE] pt-[90px] pb-[50px] 
 						px-[12px] text-[36px]
 						tablet:px-[100px] tablet:text-[48px]
+						laptop:px-[25vw] laptop:text-[36px]
 					"
 					>
 						My Experience
 					</h1>
 					{/* This carousel uses the same logic as the prior one, but it takes a small part of the screen. */}
 					<SmallCarousel />
+					<Experience />
 				</div>
 
 				{/* ------------------------------------------------------------- Featured Projects ------------------------------------------------------------- */}

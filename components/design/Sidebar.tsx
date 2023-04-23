@@ -7,9 +7,9 @@ const Sidebar = (props: { open: boolean; onClose: () => void }) => {
 	};
 
 	return (
-		<>
+		<div className="laptop:hidden">
 			<div
-				className={`laptop:hidden transform duration-[800ms] right-0 fixed h-screen bg-[#04021b] z-20 ${
+				className={`transform duration-[800ms] right-0 fixed h-screen bg-[#04021b] z-20 ${
 					props.open ? "translate-x-0" : "translate-x-[700px]"
 				}  w-2/3 tablet:w-1/3`}
 			>
@@ -101,7 +101,7 @@ const Sidebar = (props: { open: boolean; onClose: () => void }) => {
 				}`}
 				onClick={clickedBackdrop}
 			/>
-		</>
+		</div>
 	);
 };
 
