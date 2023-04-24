@@ -1,7 +1,12 @@
 import Image from "next/image";
 const Decoration = () => {
 	return (
-		<div className="hidden laptop:flex flex-col justify-center items-center right-0 h-screen fixed z-20 px-[35px]">
+		<div
+			className="hidden flex-col justify-center items-center right-0 h-screen fixed z-20 
+			tablet:px-[20px] tablet:flex 
+			laptop:px-[35px]
+		"
+		>
 			<div className="w-[2px] bg-[#838383] h-screen rounded-b-full mb-[20px]"></div>
 			<a
 				className="z-20 my-[20px]"

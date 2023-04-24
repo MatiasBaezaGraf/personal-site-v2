@@ -53,13 +53,18 @@ const Home = ({ projects }: { projects: Project[] }) => {
 			</Head>
 			<Navbar />
 			<Decoration />
-			<Image
-				src="/icons/EmailIcon.png"
-				alt="Logo"
-				width={48}
-				height={48}
-				className="hidden laptop:block fixed bottom-0 left-0 h-[48px] w-[48px] mx-[25px] mb-[15px] z-20"
-			/>
+			<a
+				href="mailto:matiasbaezagraf@gmail.com"
+				className="hidden tablet:block"
+			>
+				<Image
+					src="/icons/EmailIcon.png"
+					alt="Logo"
+					width={48}
+					height={48}
+					className=" fixed bottom-0 left-0 h-[48px] w-[48px] mx-[25px] mb-[15px] z-20"
+				/>
+			</a>
 			<main className="bg-[#010010]">
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
 				<div
@@ -161,10 +166,10 @@ const Home = ({ projects }: { projects: Project[] }) => {
 
 				<div id="experience" className="h-screen">
 					<h1
-						className="font-primary-bold text-[#DEDEDE] pt-[90px] pb-[50px] 
-						px-[12px] text-[36px]
+						className="font-primary-bold text-[#DEDEDE] 
+						px-[12px] text-[36px] pt-[90px] pb-[50px] 
 						tablet:px-[100px] tablet:text-[48px]
-						laptop:px-[25vw] laptop:text-[36px]
+						laptop:px-[25vw] laptop:text-[36px] laptop:pt-[140px] laptop:pb-[70px]
 					"
 					>
 						My Experience

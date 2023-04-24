@@ -15,11 +15,25 @@ const Carousel = () => {
                 `}
 			>
 				{/* --------------------------------------------------------- Slide 1 ---------------------------------------------------------  */}
-				<div className="h-screen w-screen bg-mobile-landscape bg-cover left-0">
+				<div
+					className="h-screen w-screen bg-cover left-0
+					bg-mobile-landscape
+					tablet:bg-tablet-landscape
+					laptop:bg-landscape"
+				>
 					{/* This div below exists to give a darker background to full screen */}
-					<div className="flex flex-col h-full w-full justify-start bg-[#010010]/60 px-[12px]">
+					<div
+						className="flex flex-col h-full w-full justify-start bg-[#010010]/60 
+						px-[12px]
+						tablet:px-[100px]
+						laptop:px-[25vw]"
+					>
 						{/* This div below exists to give a darker background to the texts */}
-						<div className="bg-black/20 h-min mt-[160px] p-[5px] shadow-lg">
+						<div
+							className="bg-black/60 h-min shadow-lg 
+							mt-[160px] p-[5px]
+							tablet:mt-[240px] tablet:p-[30px]"
+						>
 							<p className="font-primary-regular text-[16px] text-[#838383]">
 								I was born in Mar del Plata, Argentina in 1999, in a family
 								where english is almost like a second language, and since my
@@ -141,11 +155,27 @@ const Carousel = () => {
 					</div>
 				</div>
 				{/* --------------------------------------------------------- Slide 2 ---------------------------------------------------------  */}
-				<div className="h-screen w-screen bg-mobile-landscape2 bg-cover left-full">
+				<div
+					className="h-screen w-screen bg-cover left-full
+					bg-mobile-landscape2
+					tablet:bg-tablet-landscape2
+					laptop:bg-landscape2
+					"
+				>
 					{/* This div below exists to give a darker background to full screen */}
-					<div className="flex flex-col h-full w-full justify-start items-end text-right bg-[#010010]/60 px-[12px]">
+					<div
+						className="flex flex-col h-full w-full justify-start text-right bg-[#010010]/60 
+						px-[12px]  items-end
+						tablet:px-[100px] tablet:items-start
+						laptop:px-[25vw]
+						"
+					>
 						{/* This div below exists to give a darker background to the texts */}
-						<div className="bg-black/20 h-min mt-[160px] p-[5px] w-5/6 shadow-lg">
+						<div
+							className="bg-black/60 h-min  shadow-lg
+							w-5/6 mt-[160px] p-[5px]
+							tablet:w-4/6 tablet:mt-[240px] tablet:p-[30px]"
+						>
 							<p className="font-primary-regular text-[16px] text-[#838383] ">
 								I love&nbsp;
 								<span className="text-gradient">learning new technologies</span>
@@ -170,11 +200,26 @@ const Carousel = () => {
 					</div>
 				</div>
 				{/* --------------------------------------------------------- Slide 3 ---------------------------------------------------------  */}
-				<div className="h-screen w-screen bg-mobile-landscape3 bg-cover left-[200vw]">
+				<div
+					className="h-screen w-screen bg-cover left-[200vw]
+					bg-mobile-landscape3
+					tablet:bg-tablet-landscape3
+					laptop:bg-landscape3"
+				>
 					{/* This div below exists to give a darker background to full screen */}
-					<div className="flex flex-col h-full w-full justify-start bg-[#010010]/60 px-[12px]">
+					<div
+						className="flex flex-col h-full w-full justify-start bg-[#010010]/60 
+						px-[12px]
+						tablet:px-[100px] tablet:items-end
+						laptop:px-[25vw]
+					"
+					>
 						{/* This div below exists to give a darker background to the texts */}
-						<div className="bg-black/20 h-min mt-[160px] p-[5px] w-5/6 shadow-lg">
+						<div
+							className="bg-black/60 h-min shadow-lg 
+							w-5/6 mt-[160px] p-[5px]
+							tablet:w-4/6 tablet:mt-[240px] tablet:p-[30px]"
+						>
 							<p className="font-primary-regular text-[16px] text-[#838383]">
 								Another thing I love is the trips we make with my family. My
 								parents, my two brothers and I, love traveling to the Patagonia,
@@ -195,13 +240,28 @@ const Carousel = () => {
 
 			{/* -----------------------------------------------------About Me Text------------------------------------------------------  */}
 			<div
-				className={`transform duration-[500ms] absolute flex flex-row top-0 w-screen mb-[18px] px-[10px] 
+				className={`transform duration-[500ms] absolute flex flex-row top-0 w-screen mb-[18px] 
+				px-[12px]
+				tablet:px-[100px]
+				laptop:px-[25vw] 
                 ${currentTranslationInVW == 0 && "translate-x-0"} 
-                ${currentTranslationInVW == 100 && "translate-x-[25vw]"}
-                ${currentTranslationInVW == 200 && "translate-x-[50vw]"}
+                ${
+									currentTranslationInVW == 100 &&
+									"translate-x-[25vw] laptop:translate-x-[20vw]"
+								}
+                ${
+									currentTranslationInVW == 200 &&
+									"translate-x-[50vw] laptop:translate-x-[38vw]"
+								}
                 `}
 			>
-				<h1 className="font-primary-bold text-[36px] text-[#DEDEDE] mt-[90px] ">
+				<h1
+					className="font-primary-bold text-[#DEDEDE]  
+					text-[36px] mt-[90px]
+					tablet:text-[40px] tablet:mt-[120px]
+					laptop:text-[36px] laptop:mt-[140px]
+				"
+				>
 					About Me
 				</h1>
 			</div>

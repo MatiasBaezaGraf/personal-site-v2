@@ -4,7 +4,7 @@ import ProjectButton from "@/components/design/ProjectButton";
 const OtherProjects = ({ projects }: { projects: Project[] }) => {
 	const otherProjects = projects.filter((project) => !project.featured);
 	return (
-		<div className="tablet:grid grid-cols-2 gap-[30px]">
+		<div className="tablet:grid grid-cols-2 tablet:gap-[10px] laptop:gap-[30px]">
 			{otherProjects.map((project, index) => (
 				<div key={project.id}>
 					{/* Desktop View */}

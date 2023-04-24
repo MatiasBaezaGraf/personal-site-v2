@@ -22,6 +22,12 @@ module.exports = {
 			},
 			backgroundImage: {
 				"main-gradient": `linear-gradient(90deg, #FF5400, #FFB800)`,
+				landscape: "url('../public/images/Landscape.jpg')",
+				landscape2: "url('../public/images/Landscape2.jpg')",
+				landscape3: "url('../public/images/Landscape3.jpg')",
+				"tablet-landscape": "url('../public/images/TabletLandscape.jpg')",
+				"tablet-landscape2": "url('../public/images/TabletLandscape2.jpg')",
+				"tablet-landscape3": "url('../public/images/TabletLandscape3.jpg')",
 				"mobile-landscape": "url('../public/images/MobileLandscape.jpg')",
 				"mobile-landscape2": "url('../public/images/MobileLandscape2.jpg')",
 				"mobile-landscape3": "url('../public/images/MobileLandscape3.jpg')",
