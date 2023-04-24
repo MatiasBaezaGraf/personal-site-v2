@@ -22,9 +22,10 @@ const ProjectButton = ({
 				} `}
 			>
 				<h1
-					className={`font-primary-medium text-[15px] text-[#DEDEDE] mr-[10px] ${
+					className={`font-primary-medium text-[#DEDEDE] mr-[10px] ${
 						format == "small" && "hidden"
-					}`}
+					} text-[15px]
+					laptop:text-[14px]`}
 				>
 					{purpose === "github" && "Source Code"}
 					{purpose === "visit" && "Visit Website"}
@@ -34,7 +35,9 @@ const ProjectButton = ({
 					alt="Logo"
 					width={30}
 					height={30}
-					className="[h-30px] w-[30px]"
+					className="
+					h-[30px] w-[30px]
+					laptop:h-[25px] laptop:w-[25px]"
 				/>
 			</button>
 		</div>

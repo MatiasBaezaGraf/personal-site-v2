@@ -56,9 +56,9 @@ const Home = ({ projects }: { projects: Project[] }) => {
 			<Image
 				src="/icons/EmailIcon.png"
 				alt="Logo"
-				width={64}
-				height={64}
-				className="hidden laptop:block fixed bottom-0 left-0 [h-64px] w-[64px] mx-[25px] mb-[15px] z-20"
+				width={48}
+				height={48}
+				className="hidden laptop:block fixed bottom-0 left-0 h-[48px] w-[48px] mx-[25px] mb-[15px] z-20"
 			/>
 			<main className="bg-[#010010]">
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
@@ -179,12 +179,14 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					id="work"
 					className="
 					px-[12px] 
-					tablet:px-[100px]"
+					tablet:px-[100px]
+					laptop:px-[20vw]"
 				>
 					<h1
 						className="font-primary-bold text-[#DEDEDE] pt-[90px] pb-[30px]
 						text-[36px]
 						tablet:text-[48px]
+						laptop:text-[36px]
 					"
 					>
 						Featured Projects
@@ -196,12 +198,14 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				<div
 					className="
 					px-[12px] 
-					tablet:px-[80px]"
+					tablet:px-[80px]
+					laptop:px-[20vw]"
 				>
 					<h1
 						className="font-primary-bold text-[#DEDEDE] pt-[80px] pb-[30px]
 						text-[36px]
 						tablet:text-[48px]
+						laptop:text-[36px]
 					"
 					>
 						Other Projects
@@ -219,11 +223,12 @@ const Home = ({ projects }: { projects: Project[] }) => {
 						<h1
 							className="font-primary-bold text-[#DEDEDE] pt-[2vh] pb-[30px]
 							text-[40px]
-							tablet:text-[56px]"
+							tablet:text-[56px]
+							laptop:text-[45px]"
 						>
 							Let’s Get In Touch!
 						</h1>
-						<p className="font-primary-regular text-[19px] leading-[30px] text-[#838383] text-center pb-[20px]">
+						<p className="font-primary-regular text-[17px] leading-[30px] text-[#838383] text-center pb-[20px]">
 							Tell me what you have in your mind! I always have time for a new
 							project, idea or simply to chat.
 						</p>
@@ -237,7 +242,11 @@ const Home = ({ projects }: { projects: Project[] }) => {
 							</a>
 						</div>
 					</div>
-					<h5 className="font-primary-regular text-[16px] text-[#838383]">
+					<h5
+						className="font-primary-regular text-[#838383]
+					text-[16px]
+					laptop:text-[14px]"
+					>
 						Developed by Matias Baeza Graf | 2023
 					</h5>
 				</div>

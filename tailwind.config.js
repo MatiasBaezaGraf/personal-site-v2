@@ -14,7 +14,7 @@ module.exports = {
 				desktop: "1920px",
 			},
 			fontFamily: {
-				"primary-reguar": ["Regular", "sans-serif"],
+				"primary-regular": ["Regular", "sans-serif"],
 				"primary-medium": ["Medium", "sans-serif"],
 				"primary-semi-bold": ["SemiBold", "sans-serif"],
 				"primary-bold": ["Bold", "sans-serif"],
