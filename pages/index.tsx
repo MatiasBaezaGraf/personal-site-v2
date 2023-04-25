@@ -91,9 +91,16 @@ const Home = ({ projects }: { projects: Project[] }) => {
 						learn new ways to do so. Currently developing solutions with{" "}
 						<span className="text-gradient">Lightning Team.</span>
 					</p>
-					<div className="bg-main-gradient p-[2px] rounded-[3px] w-[200px] h-[64px] mt-[20px]">
+					<div
+						className="transform duration-[200ms] bg-main-gradient p-[2px] rounded-[3px] w-[200px] h-[64px] mt-[30px]
+						hover:-translate-y-[5px]"
+					>
 						<a href="CV.pdf" download className="z-20">
-							<button className="bg-[#010010] w-full h-full ">
+							<button
+								className="transform duration-[200ms] bg-[#010010] w-full h-full 
+								hover:bg-black/80 
+								"
+							>
 								<h1 className="font-primary-medium text-[15px] text-gradient">
 									Check out my resume!
 								</h1>

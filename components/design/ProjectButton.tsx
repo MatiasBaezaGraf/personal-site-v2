@@ -13,16 +13,19 @@ const ProjectButton = ({
 }) => {
 	return (
 		<div
-			className={`bg-main-gradient p-[2px] rounded-[3px] w-fit ${className}`}
+			className={`transform duration-[200ms] bg-main-gradient p-[2px] rounded-[3px] w-fit ${className}
+			hover:-translate-y-[5px]
+			`}
 		>
 			<button
 				onClick={() => window.open(url, "_blank")}
-				className={`flex flex-row items-center justify-between bg-[#010010] w-full h-full ${
+				className={`transform duration-[200ms] flex flex-row items-center justify-between bg-[#010010] text-[#DEDEDE] w-full h-full ${
 					format == "large" ? "px-[15px] py-[5px]" : "p-[7px]"
-				} `}
+				} 
+				hover:bg-[#000000]/80 hover:text-[#FFFFFF]`}
 			>
 				<h1
-					className={`font-primary-medium text-[#DEDEDE] mr-[10px] ${
+					className={`font-primary-medium  mr-[10px] ${
 						format == "small" && "hidden"
 					} text-[15px]
 					laptop:text-[14px]`}

@@ -61,7 +61,7 @@ const Decoration = () => {
 					className="object-contain h-[20px] w-[20px] mx-[14px]"
 				/>
 			</a>
-			<div className="w-[3px] bg-[#838383] h-screen rounded-t-full mt-[20px]" />
+			<div className="w-[2px] bg-[#838383] h-screen rounded-t-full mt-[20px]" />
 		</div>
 	);
 };

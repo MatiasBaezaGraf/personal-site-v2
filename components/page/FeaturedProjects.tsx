@@ -17,7 +17,10 @@ const FeaturedProjects = ({ projects }: { projects: Project[] }) => {
 							isOdd(index) ? "flex-row-reverse" : "flex-row"
 						}`}
 					>
-						<div className="flex flex-col border-[2px] border-[#838383] ">
+						<div
+							className="transform duration-[200ms] shadow-lg shadow-orange-400/10 flex flex-col border-[2px] border-[#838383] 
+							hover:scale-105"
+						>
 							<Image
 								src={`/projects/${project.imagePath}.png`}
 								alt={project.name}
