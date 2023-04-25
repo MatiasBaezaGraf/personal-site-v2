@@ -266,7 +266,11 @@ const Carousel = () => {
 				</h1>
 			</div>
 			{/* -----------------------------------------------------Crousel Selector------------------------------------------------------  */}
-			<div className="absolute bottom-0 flex flex-row justify-center w-screen mb-[18px]">
+			<div
+				className="absolute bottom-0 flex flex-row justify-center w-screen 
+				mb-[18px]
+				laptop:mb-[50px]"
+			>
 				<button
 					onClick={() => {
 						setcurrentTranslationInVW(0);

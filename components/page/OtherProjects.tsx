@@ -4,11 +4,21 @@ import ProjectButton from "@/components/design/ProjectButton";
 const OtherProjects = ({ projects }: { projects: Project[] }) => {
 	const otherProjects = projects.filter((project) => !project.featured);
 	return (
-		<div className="tablet:grid grid-cols-2 desktop:grid-cols-3 tablet:gap-[10px] laptop:gap-[30px]">
+		<div
+			className="transform duration-[200ms] grid-cols-2 
+			tablet:gap-[10px] tablet:grid 
+			desktop:grid-cols-3 
+			laptop:gap-[30px]"
+		>
 			{otherProjects.map((project, index) => (
 				<div key={project.id}>
 					{/* Desktop View */}
-					<div className="hidden laptop:block relative h-full">
+					<div
+						className="transform duration-[200ms] relative h-full
+						hidden
+						laptop:block 
+						hover:scale-105"
+					>
 						<div className="relative flex flex-col justify-between top-0 left-0 w-full h-full z-10 bg-[#030120] border-[#838383] border-[1px]">
 							<div className=" p-[20px]">
 								<h1 className="font-primary-bold text-[#DEDEDE] text-[22px] w-5/6">

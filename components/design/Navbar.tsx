@@ -60,22 +60,34 @@ const Navbar = () => {
 					laptop:flex flex-row"
 				>
 					<a className="px-[20px]" href="#about">
-						<h1 className="font-primary-medium text-[18px] text-[#DEDEDE] ">
+						<h1
+							className="font-primary-medium text-[18px] text-[#DEDEDE] 
+							transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
+						>
 							About
 						</h1>
 					</a>
 					<a className="px-[20px]" href="#experience">
-						<h1 className="font-primary-medium text-[18px] text-[#DEDEDE] ">
+						<h1
+							className="font-primary-medium text-[18px] text-[#DEDEDE] 
+							transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
+						>
 							Experience
 						</h1>
 					</a>
 					<a className="px-[20px]" href="#work">
-						<h1 className="font-primary-medium text-[18px] text-[#DEDEDE] ">
+						<h1
+							className="font-primary-medium text-[18px] text-[#DEDEDE] 
+							transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
+						>
 							Work
 						</h1>
 					</a>
 					<a className="px-[20px]" href="#contact">
-						<h1 className="font-primary-medium text-[18px] text-[#DEDEDE] ">
+						<h1
+							className="font-primary-medium text-[18px] text-[#DEDEDE] 
+							transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
+						>
 							Contact
 						</h1>
 					</a>

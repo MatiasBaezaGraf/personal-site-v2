@@ -18,7 +18,7 @@ const Decoration = () => {
 					alt="Logo"
 					width={20}
 					height={20}
-					className="object-contain h-[20px] w-[20px] mx-[14px]"
+					className="transform duration-[200ms] hover:-translate-y-[4px] hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
 				/>
 			</a>
 			<a
@@ -31,7 +31,7 @@ const Decoration = () => {
 					alt="Logo"
 					width={20}
 					height={20}
-					className="object-contain h-[20px] w-[20px] mx-[14px]"
+					className="transform duration-[200ms] hover:-translate-y-[4px] hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
 				/>
 			</a>
 			<a
@@ -44,7 +44,7 @@ const Decoration = () => {
 					alt="Logo"
 					width={20}
 					height={20}
-					className="object-contain h-[20px] w-[20px] mx-[14px]"
+					className="transform duration-[200ms] hover:-translate-y-[4px] hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
 				/>
 			</a>
 
@@ -58,7 +58,7 @@ const Decoration = () => {
 					alt="Logo"
 					width={20}
 					height={20}
-					className="object-contain h-[20px] w-[20px] mx-[14px]"
+					className="transform duration-[200ms] hover:-translate-y-[4px] hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
 				/>
 			</a>
 			<div className="w-[2px] bg-[#838383] h-screen rounded-t-full mt-[20px]" />

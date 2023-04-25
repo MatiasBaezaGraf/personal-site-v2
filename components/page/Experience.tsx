@@ -5,6 +5,13 @@ import Image from "next/image";
 const Experience = () => {
 	const [selectedExperience, setSelectedExperience] = useState(0);
 
+	const changeSelectedExperience = (state: number) => {
+		setSelectedExperience(-1);
+		setTimeout(function () {
+			setSelectedExperience(state);
+		}, 300);
+	};
+
 	return (
 		<div className="hidden laptop:flex flex-row h-[400px] w-full px-[22vw]">
 			{/* Experience Selector */}
@@ -15,13 +22,13 @@ const Experience = () => {
 						alt="Bullet"
 						width={20}
 						height={20}
-						className={`object-contain [h-20px] w-[20px] mx-[14px] ${
+						className={`transform duration-[200ms] object-contain [h-20px] w-[20px] mx-[14px] ${
 							selectedExperience == 0 ? "opacity-100" : "opacity-0"
 						}`}
 					/>
 					<button
-						onClick={() => setSelectedExperience(0)}
-						className={`py-[15px] pl-[20px] text-left w-full ${
+						onClick={() => changeSelectedExperience(0)}
+						className={`transform duration-[200ms] py-[15px] pl-[20px] text-left w-full ${
 							selectedExperience == 0 && "bg-[#D9D9D9]/20"
 						}`}
 					>
@@ -40,13 +47,13 @@ const Experience = () => {
 						alt="Bullet"
 						width={20}
 						height={20}
-						className={`object-contain [h-20px] w-[20px] mx-[14px] ${
+						className={`transform duration-[200ms] object-contain [h-20px] w-[20px] mx-[14px] ${
 							selectedExperience == 1 ? "opacity-100" : "opacity-0"
 						}`}
 					/>
 					<button
-						onClick={() => setSelectedExperience(1)}
-						className={`py-[15px] pl-[20px] text-left w-full ${
+						onClick={() => changeSelectedExperience(1)}
+						className={`transform duration-[200ms] py-[15px] pl-[20px] text-left w-full ${
 							selectedExperience == 1 && "bg-[#D9D9D9]/20"
 						}`}
 					>
@@ -55,7 +62,7 @@ const Experience = () => {
 								selectedExperience == 1 ? "text-gradient" : "text-[#838383]"
 							}`}
 						>
-							Universidad Advenitsta del Plata
+							Universidad Adventista del Plata
 						</h1>
 					</button>
 				</div>
@@ -65,13 +72,13 @@ const Experience = () => {
 						alt="Bullet"
 						width={20}
 						height={20}
-						className={`object-contain [h-20px] w-[20px] mx-[14px] ${
+						className={`transform duration-[200ms] object-contain [h-20px] w-[20px] mx-[14px] ${
 							selectedExperience == 2 ? "opacity-100" : "opacity-0"
 						}`}
 					/>
 					<button
-						onClick={() => setSelectedExperience(2)}
-						className={`py-[15px] pl-[20px] text-left w-full ${
+						onClick={() => changeSelectedExperience(2)}
+						className={`transform duration-[200ms] py-[15px] pl-[20px] text-left w-full ${
 							selectedExperience == 2 && "bg-[#D9D9D9]/20"
 						}`}
 					>
@@ -88,8 +95,10 @@ const Experience = () => {
 			{/* Experience Content */}
 			<div className="relative h-full w-3/5">
 				<div
-					className={`absolute flex flex-col py-[10px] px-[40px] ${
-						selectedExperience == 0 ? "opacity-100" : "opacity-0"
+					className={`transform duration-[200ms] absolute flex flex-col py-[10px] px-[40px] ${
+						selectedExperience == 0
+							? "opacity-100"
+							: "opacity-0 translate-x-[100px]"
 					}`}
 				>
 					<h1 className="text-[23px]">
@@ -141,8 +150,10 @@ const Experience = () => {
 					</div>
 				</div>
 				<div
-					className={`absolute flex flex-col py-[10px] px-[40px] ${
-						selectedExperience == 1 ? "opacity-100" : "opacity-0"
+					className={`transform duration-[200ms] absolute flex flex-col py-[10px] px-[40px] ${
+						selectedExperience == 1
+							? "opacity-100"
+							: "opacity-0 translate-x-[100px]"
 					}`}
 				>
 					<h1 className="text-[23px]">
@@ -192,8 +203,10 @@ const Experience = () => {
 					</div>
 				</div>
 				<div
-					className={`absolute flex flex-col py-[10px] px-[40px] ${
-						selectedExperience == 2 ? "opacity-100" : "opacity-0"
+					className={`transform duration-[200ms] absolute flex flex-col py-[10px] px-[40px] ${
+						selectedExperience == 2
+							? "opacity-100 "
+							: "opacity-0 translate-x-[100px]"
 					}`}
 				>
 					<h1 className="text-[23px]">

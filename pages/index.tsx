@@ -11,6 +11,8 @@ import OtherProjects from "@/components/page/OtherProjects";
 import Decoration from "@/components/design/Decoration";
 import Experience from "@/components/page/Experience";
 
+import { SocialIcon } from "react-social-icons";
+
 export type Project = {
 	id: string;
 	name: string;
@@ -53,6 +55,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 			</Head>
 			<Navbar />
 			<Decoration />
+
 			<a
 				href="mailto:matiasbaezagraf@gmail.com"
 				className="hidden tablet:block"
@@ -62,7 +65,8 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					alt="Logo"
 					width={48}
 					height={48}
-					className=" fixed bottom-0 left-0 h-[48px] w-[48px] mx-[25px] mb-[15px] z-20"
+					className="transform duration-[200ms]  fixed bottom-0 left-0 h-[48px] w-[48px] mx-[25px] mb-[15px] z-20
+						hover:-translate-y-[5px] hover:scale-110"
 				/>
 			</a>
 			<main className="bg-[#010010]">
@@ -231,12 +235,17 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					px-[15px]
 					tablet:px-[100px]"
 				>
-					<div className="flex flex-col items-center mt-[150px]">
+					<div
+						className="flex flex-col items-center 
+						mt-[150px]
+						desktop:mt-[220px]"
+					>
 						<h1
 							className="font-primary-bold text-[#DEDEDE] pt-[2vh] pb-[30px]
 							text-[40px]
 							tablet:text-[56px]
-							laptop:text-[45px]"
+							laptop:text-[45px]
+							desktop:text-[56px]"
 						>
 							Let’s Get In Touch!
 						</h1>
@@ -244,9 +253,15 @@ const Home = ({ projects }: { projects: Project[] }) => {
 							Tell me what you have in your mind! I always have time for a new
 							project, idea or simply to chat.
 						</p>
-						<div className="bg-main-gradient p-[2px] rounded-[3px] w-[220px] h-[76px] mt-[20px]">
+						<div
+							className="transform duration-[200ms] bg-main-gradient p-[2px] rounded-[3px] w-[220px] h-[76px] mt-[20px]
+							hover:-translate-y-[5px]"
+						>
 							<a href="mailto:matiasbaezagraf@gmail.com">
-								<button className="bg-[#010010] w-full h-full">
+								<button
+									className="transform duration-[200ms] bg-[#010010] w-full h-full
+									hover:bg-black/80"
+								>
 									<h1 className="font-primary-medium text-[22px] text-gradient">
 										Let’s Talk!
 									</h1>
