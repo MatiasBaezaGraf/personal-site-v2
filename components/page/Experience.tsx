@@ -6,10 +6,12 @@ const Experience = () => {
 	const [selectedExperience, setSelectedExperience] = useState(0);
 
 	const changeSelectedExperience = (state: number) => {
-		setSelectedExperience(-1);
-		setTimeout(function () {
-			setSelectedExperience(state);
-		}, 300);
+		if (state != selectedExperience) {
+			setSelectedExperience(-1);
+			setTimeout(function () {
+				setSelectedExperience(state);
+			}, 300);
+		}
 	};
 
 	return (
@@ -23,7 +25,9 @@ const Experience = () => {
 						width={20}
 						height={20}
 						className={`transform duration-[200ms] object-contain [h-20px] w-[20px] mx-[14px] ${
-							selectedExperience == 0 ? "opacity-100" : "opacity-0"
+							selectedExperience == 0
+								? "opacity-100"
+								: "opacity-0 -translate-x-[10px]"
 						}`}
 					/>
 					<button
@@ -48,7 +52,9 @@ const Experience = () => {
 						width={20}
 						height={20}
 						className={`transform duration-[200ms] object-contain [h-20px] w-[20px] mx-[14px] ${
-							selectedExperience == 1 ? "opacity-100" : "opacity-0"
+							selectedExperience == 1
+								? "opacity-100"
+								: "opacity-0 -translate-x-[10px]"
 						}`}
 					/>
 					<button
@@ -73,7 +79,9 @@ const Experience = () => {
 						width={20}
 						height={20}
 						className={`transform duration-[200ms] object-contain [h-20px] w-[20px] mx-[14px] ${
-							selectedExperience == 2 ? "opacity-100" : "opacity-0"
+							selectedExperience == 2
+								? "opacity-100"
+								: "opacity-0 -translate-x-[10px]"
 						}`}
 					/>
 					<button

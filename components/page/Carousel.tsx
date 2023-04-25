@@ -265,6 +265,53 @@ const Carousel = () => {
 					About Me
 				</h1>
 			</div>
+			{/* ----------------------------------------------------- Carousel Buttons ------------------------------------------------------  */}
+			<div className="absolute w-full flex flex-row justify-between bottom-0 mb-[50vh] px-[200px]">
+				<button
+					onClick={() => {
+						if (currentTranslationInVW > 0) {
+							setcurrentTranslationInVW(currentTranslationInVW - 100);
+						}
+					}}
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						className="transform duration-[200ms] h-[56px] w-[56px] text-[#DEDEDE]/80 hover:text-[#838383] cursor-pointer"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth={1}
+							d="M15 19l-7-7 7-7"
+						/>
+					</svg>
+				</button>
+				<button
+					onClick={() => {
+						if (currentTranslationInVW < 200) {
+							setcurrentTranslationInVW(currentTranslationInVW + 100);
+						}
+					}}
+				>
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						className="transform duration-[200ms] h-[56px] w-[56px] text-[#DEDEDE]/80 hover:text-[#838383] cursor-pointer"
+						fill="none"
+						viewBox="0 0 24 24"
+						stroke="currentColor"
+					>
+						<path
+							strokeLinecap="round"
+							strokeLinejoin="round"
+							strokeWidth={1}
+							d="M9 5l7 7-7 7"
+						/>
+					</svg>
+				</button>
+			</div>
 			{/* -----------------------------------------------------Crousel Selector------------------------------------------------------  */}
 			<div
 				className="absolute bottom-0 flex flex-row justify-center w-screen 

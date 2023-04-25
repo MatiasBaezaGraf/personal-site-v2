@@ -93,7 +93,9 @@ const Home = ({ projects }: { projects: Project[] }) => {
 						Hello there! I’m a Software Engineer born, raised and based in
 						Argentina. I love software development and I’m always willing to
 						learn new ways to do so. Currently developing solutions with{" "}
-						<span className="text-gradient">Lightning Team.</span>
+						<a target="_blank" href="https://www.lightningteam.co/">
+							<span className="text-gradient">Lightning Team.</span>
+						</a>
 					</p>
 					<div
 						className="transform duration-[200ms] bg-main-gradient p-[2px] rounded-[3px] w-[200px] h-[64px] mt-[30px]
