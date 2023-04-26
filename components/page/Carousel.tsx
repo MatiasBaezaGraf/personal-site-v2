@@ -266,7 +266,11 @@ const Carousel = () => {
 				</h1>
 			</div>
 			{/* ----------------------------------------------------- Carousel Buttons ------------------------------------------------------  */}
-			<div className="absolute w-full flex flex-row justify-between bottom-0 mb-[50vh] px-[200px]">
+			<div
+				className="absolute w-full flex flex-row justify-between bottom-0 z-30
+				laptop:mb-[50vh] laptop:px-[200px]
+			"
+			>
 				<button
 					onClick={() => {
 						if (currentTranslationInVW > 0) {
