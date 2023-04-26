@@ -29,7 +29,7 @@ function useScrollDirection() {
 	return scrollDirection;
 }
 
-const Navbar = () => {
+const Navbar = ({ className }: { className?: string }) => {
 	const scrollDirection = useScrollDirection();
 	const [open, setOpen] = useState(false);
 
@@ -40,7 +40,7 @@ const Navbar = () => {
 	return (
 		<>
 			<nav
-				className={`transform duration-[500ms] flex flex-row px-[25px] items-center w-full h-[80px] fixed  z-30 bg-transparent backdrop-blur-sm ${
+				className={`${className} transform duration-[500ms] flex flex-row px-[25px] items-center w-full h-[80px] fixed  z-30 bg-transparent backdrop-blur-sm ${
 					scrollDirection == "down" ? "-top-[100px]" : "top-0"
 				}
 					justify-between

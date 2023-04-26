@@ -1,11 +1,10 @@
 import Image from "next/image";
-const Decoration = () => {
+const Decoration = ({ className }: { className?: string }) => {
 	return (
 		<div
-			className="hidden flex-col justify-center items-center right-0 h-screen fixed z-20 
+			className={`${className} hidden flex-col justify-center items-center right-0 h-screen fixed z-20 
 			tablet:px-[20px] tablet:flex 
-			laptop:px-[35px]
-		"
+			laptop:px-[35px]`}
 		>
 			<div className="w-[2px] bg-[#838383] h-screen rounded-b-full mb-[20px]"></div>
 			<a

@@ -11,7 +11,8 @@ import OtherProjects from "@/components/page/OtherProjects";
 import Decoration from "@/components/design/Decoration";
 import Experience from "@/components/page/Experience";
 
-import { SocialIcon } from "react-social-icons";
+import IntroAnimation from "@/components/design/IntroAnimation";
+import { useState } from "react";
 
 export type Project = {
 	id: string;
@@ -42,6 +43,26 @@ export const getStaticProps = async () => {
 };
 
 const Home = ({ projects }: { projects: Project[] }) => {
+	//The first time the page loads, the intro animation plays, and then the page is loaded.
+
+	//Thist first state exists to prevent the page from loading before the intro animation is finished.
+	//The page with content is in display:hidden until the intro animation is finished.
+	const [loaded, setLoaded] = useState(false);
+
+	//This second div existis to play the fadeIn animation of the elments once display:block is applied
+	//to the content page because if this is triggered at the same time as the intro
+	//animation, the fadeIn animation is not played.
+	const [loadPage, setLoadPage] = useState(false);
+
+	//Every element that is inside the <main> tag and has an animation, MUST have it's animation
+	//triggered with loadPage, not loaded, because loaded is triggered before the fadeIn animation.
+	const loadIn = () => {
+		setLoaded(true);
+		setTimeout(() => {
+			setLoadPage(true);
+		}, 500);
+	};
+
 	return (
 		<>
 			<Head>
@@ -53,8 +74,26 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-			<Navbar />
-			<Decoration />
+
+			<div
+				className={`${
+					loaded ? "hidden" : "flex"
+				} flex-col justify-center items-center w-screen h-screen bg-[#010010] z-50`}
+			>
+				<IntroAnimation onStopPlaying={loadIn} />
+			</div>
+
+			{/* Fixed elements */}
+			<Navbar
+				className={`transform duration-[500ms] ${
+					loaded ? "opacity-100" : "opacity-0 -translate-y-[50px]"
+				}`}
+			/>
+			<Decoration
+				className={`transform duration-[500ms] ${
+					loaded ? "opacity-100" : "opacity-0 translate-x-[50px]"
+				}`}
+			/>
 
 			<a
 				href="mailto:matiasbaezagraf@gmail.com"
@@ -65,11 +104,13 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					alt="Logo"
 					width={48}
 					height={48}
-					className="transform duration-[200ms]  fixed bottom-0 left-0 h-[48px] w-[48px] mx-[25px] mb-[15px] z-20
-						hover:-translate-y-[5px] hover:scale-110"
+					className={`transform duration-[200ms]  fixed bottom-0 left-0 h-[48px] w-[48px] mx-[25px] mb-[15px] z-20
+						hover:-translate-y-[5px] hover:scale-110
+						${loaded ? "opacity-100" : "opacity-0 scale-75"}`}
 				/>
 			</a>
-			<main className="bg-[#010010]">
+			{/* Scrollable section */}
+			<main className={`${loaded ? "block" : "hidden"} bg-[#010010]`}>
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
 				<div
 					id="home"
@@ -80,16 +121,35 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				>
 					{/* This invisible div exists to center the content. It balances the footer mt-auto with mb-auto */}
 					<div className="mb-auto" />
-					<h4 className="font-primary-medium text-[20px] text-gradient">
+					<h4
+						className={`font-primary-medium text-[20px] text-gradient transform duration-[400ms] ${
+							loadPage ? "opacity-100" : "opacity-0 -translate-y-[10px]"
+						}`}
+					>
 						Welcome! My name is
 					</h4>
-					<h1 className="font-primary-bold leading-none text-[#DBDBDB]  mt-[15px] text-[40px] tablet:text-[60px]">
+					<h1
+						className={`font-primary-bold leading-none text-[#DBDBDB]  mt-[15px] text-[40px] tablet:text-[60px] 
+						transform delay-[200ms] duration-[400ms] ${
+							loadPage ? "opacity-100" : "opacity-0 -translate-y-[10px]"
+						}`}
+					>
 						Matias Baeza Graf
 					</h1>
-					<h1 className="font-primary-bold leading-none text-[#838383]  mt-[5px] text-[40px] tablet:text-[60px]">
+					<h1
+						className={`font-primary-bold leading-none text-[#838383]  mt-[5px] text-[40px] tablet:text-[60px]
+						transform delay-[400ms] duration-[400ms] ${
+							loadPage ? "opacity-100" : "opacity-0 -translate-y-[10px]"
+						}`}
+					>
 						Software Engineer
 					</h1>
-					<p className="font-primary-medium text-[#838383] text-[17px] leading-[30px] mt-[20px] laptop:w-2/3">
+					<p
+						className={`font-primary-medium text-[#838383] text-[17px] leading-[30px] mt-[20px] laptop:w-2/3
+						transform delay-[400ms] duration-[400ms] ${
+							loadPage ? "opacity-100" : "opacity-0 -translate-y-[10px]"
+						}`}
+					>
 						Hello there! I’m a Software Engineer born, raised and based in
 						Argentina. I love software development and I’m always willing to
 						learn new ways to do so. Currently developing solutions with{" "}
@@ -98,8 +158,10 @@ const Home = ({ projects }: { projects: Project[] }) => {
 						</a>
 					</p>
 					<div
-						className="transform duration-[200ms] bg-main-gradient p-[2px] rounded-[3px] w-[200px] h-[64px] mt-[30px]
-						hover:-translate-y-[5px]"
+						className={`bg-main-gradient p-[2px] rounded-[3px] w-[200px] h-[64px] mt-[30px]
+						transform delay-[600ms] duration-[400ms] ${
+							loadPage ? "opacity-100 " : " opacity-0 -translate-y-[10px]"
+						}`}
 					>
 						<a href="CV.pdf" download className="z-20">
 							<button
