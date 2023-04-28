@@ -79,7 +79,7 @@ const UpdateSidebar = ({
 						<input
 							type="text"
 							value={name}
-							className="w-3/5 font-primary-medium bg-transparent text-[#838383] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
+							className="w-3/5 font-primary-medium bg-transparent text-[#DEDEDE] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
 							onChange={(e) => setName(e.target.value)}
 						/>
 					</div>
@@ -90,7 +90,7 @@ const UpdateSidebar = ({
 						<textarea
 							rows={5}
 							value={description}
-							className="w-3/5 resize-none font-primary-medium bg-transparent text-[#838383] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] mb-[20px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
+							className="w-3/5 resize-none font-primary-medium bg-transparent text-[#DEDEDE] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] mb-[20px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
 							onChange={(e) => setDescription(e.target.value)}
 						/>
 					</div>
@@ -101,7 +101,7 @@ const UpdateSidebar = ({
 						<input
 							type="text"
 							value={technologies}
-							className="w-3/5 font-primary-medium bg-transparent text-[#838383] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
+							className="w-3/5 font-primary-medium bg-transparent text-[#DEDEDE] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
 							onChange={(e) => setTechnologies(e.target.value)}
 						/>
 					</div>
@@ -123,7 +123,7 @@ const UpdateSidebar = ({
 						<input
 							type="text"
 							value={visitUrl ? visitUrl : ""}
-							className="w-3/5 font-primary-medium bg-transparent text-[#838383] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
+							className="w-3/5 font-primary-medium bg-transparent text-[#DEDEDE] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
 							onChange={(e) => setVisitUrl(e.target.value)}
 						/>
 					</div>
@@ -134,7 +134,7 @@ const UpdateSidebar = ({
 						<input
 							type="text"
 							value={githubUrl ? githubUrl : ""}
-							className="w-3/5 font-primary-medium bg-transparent text-[#838383] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
+							className="w-3/5 font-primary-medium bg-transparent text-[#DEDEDE] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
 							onChange={(e) => setGithubUrl(e.target.value)}
 						/>
 					</div>
@@ -145,7 +145,7 @@ const UpdateSidebar = ({
 						<input
 							type="text"
 							value={imagePath}
-							className="w-3/5 font-primary-medium bg-transparent text-[#838383] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
+							className="w-3/5 font-primary-medium bg-transparent text-[#DEDEDE] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
 							onChange={(e) => setImagePath(e.target.value)}
 						/>
 					</div>

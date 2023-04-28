@@ -6,6 +6,7 @@ import supabase from "supabase.js";
 
 import { Project } from "@/pages";
 import ProjectManagement from "@/components/page/ProjectManagement";
+import Link from "next/link";
 
 export const getServerSideProps = async () => {
 	const { data: projects, error } = await supabase.from("Projects").select("*");
@@ -58,18 +59,18 @@ const Admin = ({ projects }: { projects: Project[] }) => {
 						</button>
 
 						<button>
-							<a href="/">
+							<Link href="/">
 								<h1
 									className="font-primary-medium text-[18px] text-[#DEDEDE] 
                         		transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
 								>
 									Home
 								</h1>
-							</a>
+							</Link>
 						</button>
 					</div>
 
-					<h1 className="font-primary-bold text-[#DEDEDE] text-[30px] mb-[50px]">
+					<h1 className="font-primary-bold text-[#DEDEDE] text-[30px] mt-[30px] mb-[50px]">
 						Projects
 					</h1>
 					<ProjectManagement projects={projects} />

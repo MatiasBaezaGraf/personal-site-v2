@@ -1,14 +1,21 @@
 import { Project } from "@/pages";
 import { useState } from "react";
 import UpdateSidebar from "../design/UpdateSidebar";
+import DeleteSidebar from "../design/DeleteSidebar";
 
 const ProjectManagement = ({ projects }: { projects: Project[] }) => {
 	const [currentProject, setCurrentProject] = useState<Project | null>(null);
 	const [openUpdate, setOpenUpdate] = useState<boolean>(false);
+	const [openDelete, setOpenDelete] = useState<boolean>(false);
 
 	const updateProject = (project: Project) => {
 		setCurrentProject(project);
 		setOpenUpdate(true);
+	};
+
+	const deleteProject = (project: Project) => {
+		setCurrentProject(project);
+		setOpenDelete(true);
 	};
 
 	// Order projects by id
@@ -100,7 +107,7 @@ const ProjectManagement = ({ projects }: { projects: Project[] }) => {
 						<div className="flex flex-row">
 							<button
 								onClick={() => updateProject(project)}
-								className="p-[10px]"
+								className="p-[10px] transform duration-[200ms] hover:-translate-y-[7px]"
 							>
 								<svg
 									fill="#dedede"
@@ -133,7 +140,10 @@ const ProjectManagement = ({ projects }: { projects: Project[] }) => {
 									</g>
 								</svg>
 							</button>
-							<button className="p-[10px]">
+							<button
+								onClick={() => deleteProject(project)}
+								className="p-[10px] transform duration-[200ms] hover:-translate-y-[7px]"
+							>
 								<svg
 									width="24px"
 									height="24px"
@@ -184,11 +194,17 @@ const ProjectManagement = ({ projects }: { projects: Project[] }) => {
 			</div>
 
 			{/* Update sidebar */}
-
 			<UpdateSidebar
 				open={openUpdate}
 				project={currentProject}
 				close={() => setOpenUpdate(false)}
+			/>
+
+			{/* Delete sidebar */}
+			<DeleteSidebar
+				open={openDelete}
+				project={currentProject}
+				close={() => setOpenDelete(false)}
 			/>
 		</>
 	);
