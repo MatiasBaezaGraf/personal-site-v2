@@ -7,9 +7,13 @@ const FeaturedProjects = ({ projects }: { projects: Project[] }) => {
 
 	const isOdd = (num: number) => num % 2;
 
+	const orderedProjects = featuredProjects.sort(
+		(a, b) => parseInt(a.id) - parseInt(b.id)
+	);
+
 	return (
 		<>
-			{featuredProjects.map((project, index) => (
+			{orderedProjects.map((project, index) => (
 				<div key={project.id}>
 					{/* Desktop View */}
 					<div

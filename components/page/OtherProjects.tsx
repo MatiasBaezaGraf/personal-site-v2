@@ -3,6 +3,9 @@ import ProjectButton from "@/components/design/ProjectButton";
 
 const OtherProjects = ({ projects }: { projects: Project[] }) => {
 	const otherProjects = projects.filter((project) => !project.featured);
+	const orderedProjects = otherProjects.sort(
+		(a, b) => parseInt(a.id) - parseInt(b.id)
+	);
 	return (
 		<div
 			className="transform duration-[200ms] grid-cols-2 
@@ -10,7 +13,7 @@ const OtherProjects = ({ projects }: { projects: Project[] }) => {
 			desktop:grid-cols-3 
 			laptop:gap-[30px]"
 		>
-			{otherProjects.map((project, index) => (
+			{orderedProjects.map((project, index) => (
 				<div key={project.id}>
 					{/* Desktop View */}
 					<div

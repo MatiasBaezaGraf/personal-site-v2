@@ -68,7 +68,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 			<Head>
 				<title>Matias Baeza Graf</title>
 				<meta
-					name="description"
+					name="Matias Baeza Graf"
 					content="Personal Site, by Matias Baeza Graf"
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -110,11 +110,15 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				/>
 			</a>
 			{/* Scrollable section */}
-			<main className={`${loaded ? "block" : "hidden"} bg-[#010010]`}>
+			<main
+				className={`${
+					loaded ? "block" : "hidden"
+				} bg-[#010010] overflow-scroll snap-y`}
+			>
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
 				<div
 					id="home"
-					className="h-screen flex flex-col justify-center 
+					className="h-screen flex flex-col justify-center snap-start 
 					px-[10px]
 					tablet:px-[100px]
 					laptop:px-[25vw]"
@@ -269,7 +273,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 						laptop:text-[36px]
 					"
 					>
-						Featured Projects
+						Highlighted Projects
 					</h1>
 					<FeaturedProjects projects={projects} />
 				</div>
