@@ -104,7 +104,7 @@ const ProjectManagement = ({ projects }: { projects: Project[] }) => {
 						</div>
 					</div>
 					{orderedProjects.map((project, index) => (
-						<div className="flex flex-row">
+						<div key={index} className="flex flex-row">
 							<button
 								onClick={() => updateProject(project)}
 								className="p-[10px] transform duration-[200ms] hover:-translate-y-[7px]"

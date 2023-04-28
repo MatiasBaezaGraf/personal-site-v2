@@ -1,5 +1,6 @@
 import { FormEvent, useState } from "react";
 import Image from "next/image";
+import Link from "next/link";
 
 import supabase from "supabase.js";
 
@@ -23,14 +24,14 @@ const Auth = () => {
 	return (
 		<div className="w-screen h-screen bg-[#010010] flex flex-col justify-start items-center">
 			<div className="absolute top-0 left-0 p-[30px]">
-				<a href="/">
+				<Link href="/">
 					<h1
 						className="font-primary-medium text-[18px] text-[#DEDEDE] 
                         transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
 					>
 						Home
 					</h1>
-				</a>
+				</Link>
 			</div>
 			<div className="flex flex-col justify-start items-center border-[2px] border-[#838383] mt-[13vh] p-[50px]">
 				<div className=" mb-[30px]">
