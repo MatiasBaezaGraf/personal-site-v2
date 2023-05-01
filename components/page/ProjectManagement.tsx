@@ -29,8 +29,8 @@ const ProjectManagement = ({ projects }: { projects: Project[] }) => {
 	return (
 		<>
 			<div className="overflow-x-auto">
-				<div className="w-[120vw] bg-[#010010] font-primary-medium text-[#DEDEDE] text-[15px] py-[10px]">
-					<div className="flex flex-row mb-[10px]">
+				<div className="w-[400vw] tablet:w-[150vw] laptop:w-[120vw] bg-[#010010] font-primary-medium text-[#DEDEDE] text-[15px] py-[10px]">
+					<div className="absolute flex flex-row top-[160px] ml-auto mr-auto">
 						<div className="p-[10px]">
 							<SVG type="edit" fill="none" />
 						</div>
@@ -39,7 +39,7 @@ const ProjectManagement = ({ projects }: { projects: Project[] }) => {
 						</div>
 						<button
 							onClick={() => setOpenCreate(true)}
-							className="flex flex-row justify-center items-center transform duration-[200ms] bg-main-gradient px-[50px] py-[1px] rounded-md hover:scale-105"
+							className="flex flex-row justify-center items-center transform duration-[200ms] bg-main-gradient px-[30px] tablet:px-[20px] laptop:px-[50px] py-[1px] rounded-md hover:scale-105"
 						>
 							<h1 className="font-primary-bold text-[14px] text-black">
 								+ New Project

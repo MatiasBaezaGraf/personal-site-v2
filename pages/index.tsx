@@ -110,11 +110,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 				/>
 			</a>
 			{/* Scrollable section */}
-			<main
-				className={`${
-					loaded ? "block" : "hidden"
-				} bg-[#010010] overflow-scroll snap-y`}
-			>
+			<main className={`${loaded ? "block" : "hidden"} bg-[#010010] snap-y`}>
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
 				<div
 					id="home"

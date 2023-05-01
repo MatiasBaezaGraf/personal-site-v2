@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import supabase from "supabase.js";
+import SVG from "./SVG";
 
 const DeleteSidebar = ({
 	open,
@@ -42,8 +43,11 @@ const DeleteSidebar = ({
 			<div
 				className={`transform duration-[400ms] right-0 top-0 fixed h-screen bg-[#282828] z-30 flex flex-col items-start justify-center ${
 					open ? "translate-x-0" : "translate-x-[1500px]"
-				}  w-2/3 tablet:w-2/5`}
+				}  w-2/3 laptop:w-2/5`}
 			>
+				<button className="absolute top-[30px] right-0" onClick={close}>
+					<SVG type="close" />
+				</button>
 				<h1 className="font-primary-semi-bold text-[#DEDEDE] text-[25px] text-start py-[10px] px-[20px]">
 					Are you sure you want to delete{" "}
 					<span className="text-gradient">{name}</span>?

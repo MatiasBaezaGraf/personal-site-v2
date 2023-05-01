@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import supabase from "supabase.js";
+import SVG from "./SVG";
 
 const CreateSidebar = ({
 	open,
@@ -47,11 +48,16 @@ const CreateSidebar = ({
 			<div
 				className={`transform duration-[400ms] right-0 top-0 fixed h-screen bg-[#282828] z-30  ${
 					open ? "translate-x-0" : "translate-x-[1500px]"
-				}  w-2/3 tablet:w-2/5`}
+				}  w-2/3 laptop:w-2/5`}
 			>
-				<h1 className="font-primary-semi-bold text-[#DEDEDE] text-[25px] text-start py-[10px] px-[20px]">
-					New Project
-				</h1>
+				<div className="flex flex-row items-center justify-between">
+					<h1 className="font-primary-bold text-[#DEDEDE] text-[25px] text-start p-[20px]">
+						New Project
+					</h1>
+					<button onClick={close}>
+						<SVG type="close" />
+					</button>
+				</div>
 				<div className="flex flex-col">
 					<div className="flex flex-row justify-between mb-[25px]">
 						<h1 className="font-primary-medium text-[#838383] text-[15px] py-[11px] px-[20px]">

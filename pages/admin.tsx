@@ -70,7 +70,7 @@ const Admin = ({ projects }: { projects: Project[] }) => {
 						</button>
 					</div>
 
-					<h1 className="font-primary-bold text-[#DEDEDE] text-[30px] mt-[30px] mb-[50px]">
+					<h1 className="font-primary-bold text-[#DEDEDE] text-[30px] mt-[70px] mb-[70px]">
 						Projects
 					</h1>
 					<ProjectManagement projects={projects} />
