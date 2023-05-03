@@ -7,6 +7,7 @@ import supabase from "supabase.js";
 import { Project } from "@/pages";
 import ProjectManagement from "@/components/admin/ProjectManagement";
 import Link from "next/link";
+import Head from "next/head";
 
 // export const getServerSideProps = async () => {
 // 	const { data: projects, error } = await supabase.from("Projects").select("*");
@@ -58,41 +59,52 @@ const Admin = () => {
 	};
 
 	return (
-		<div>
-			{session ? (
-				<div className="w-screen min-h-screen bg-[#010010] p-[30px] text-center">
-					<h1></h1>
-					<div className="absolute top-0 left-0 p-[30px]">
-						<button onClick={signOut}>
-							<h1
-								className="font-primary-medium text-[18px] text-[#DEDEDE] mr-[20px]
-                        		transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient hover:fill-[#FF5400]"
-							>
-								Sign Out
-							</h1>
-						</button>
-
-						<button>
-							<Link href="/">
+		<>
+			<Head>
+				<title>Matias Baeza Graf | Dashboard</title>
+				<meta
+					name="Matias Baeza Graf"
+					content="Personal Site, by Matias Baeza Graf"
+				/>
+				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<link rel="icon" href="/favicon.ico" />
+			</Head>
+			<div>
+				{session ? (
+					<div className="w-screen min-h-screen bg-[#010010] p-[30px] text-center">
+						<h1></h1>
+						<div className="absolute top-0 left-0 p-[30px]">
+							<button onClick={signOut}>
 								<h1
-									className="font-primary-medium text-[18px] text-[#DEDEDE] 
-                        		transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
+									className="font-primary-medium text-[18px] text-[#DEDEDE] mr-[20px]
+                        		transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient hover:fill-[#FF5400]"
 								>
-									Home
+									Sign Out
 								</h1>
-							</Link>
-						</button>
-					</div>
+							</button>
 
-					<h1 className="font-primary-bold text-[#DEDEDE] text-[30px] mt-[70px] mb-[70px]">
-						Projects
-					</h1>
-					<ProjectManagement projects={projects} onChange={triggerChange} />
-				</div>
-			) : (
-				<Auth />
-			)}
-		</div>
+							<button>
+								<Link href="/">
+									<h1
+										className="font-primary-medium text-[18px] text-[#DEDEDE] 
+                        		transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
+									>
+										Home
+									</h1>
+								</Link>
+							</button>
+						</div>
+
+						<h1 className="font-primary-bold text-[#DEDEDE] text-[30px] mt-[70px] mb-[70px]">
+							Projects
+						</h1>
+						<ProjectManagement projects={projects} onChange={triggerChange} />
+					</div>
+				) : (
+					<Auth />
+				)}
+			</div>
+		</>
 	);
 };
 

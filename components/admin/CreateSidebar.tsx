@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 
 import supabase from "supabase.js";
 import SVG from "../design/SVG";
-import FileUpload from "./FileUpload";
+import FileManagement from "./FileManagement";
 
 const CreateSidebar = ({
 	open,
@@ -146,7 +146,7 @@ const CreateSidebar = ({
 								Image
 							</h1>
 							<div className="w-3/5 mr-[20px]">
-								<FileUpload open={open} submit={createProject} />
+								<FileManagement open={open} submit={createProject} />
 							</div>
 						</div>
 					</div>

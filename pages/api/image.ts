@@ -12,8 +12,7 @@ export const config = {
 
 const readFile = (
 	req: NextApiRequest,
-	saveLocally?: boolean,
-	givenName?: string
+	saveLocally?: boolean
 ): Promise<{ fields: formidable.Fields; files: formidable.Files }> => {
 	const options: formidable.Options = {};
 	if (saveLocally) {
@@ -39,8 +38,15 @@ const handler: NextApiHandler = async (req, res) => {
 		await fs.mkdir(path.join(process.cwd(), "/public/projects"));
 	}
 
-	await readFile(req, true);
-	res.json({ message: "success" });
+	switch (req.method) {
+		case "POST":
+			await readFile(req, true);
+			res.json({ message: "Uploaded Image!" });
+			break;
+		default:
+			res.json({ message: "Method not allowed or specified!" });
+			break;
+	}
 };
 
 export default handler;

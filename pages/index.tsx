@@ -25,7 +25,7 @@ export type Project = {
 	featured: boolean;
 };
 
-export const getStaticProps = async () => {
+export const getServerSideProps = async () => {
 	const { data: projects, error } = await supabase.from("Projects").select("*");
 
 	if (error) {

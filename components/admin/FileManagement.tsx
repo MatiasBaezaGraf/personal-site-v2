@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import SVG from "../design/SVG";
 
-const FileUpload = ({
+const FileManagement = ({
 	open,
 	submit,
 }: {
@@ -99,4 +99,4 @@ const FileUpload = ({
 	);
 };
 
-export default FileUpload;
+export default FileManagement;
