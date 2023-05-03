@@ -1,46 +1,60 @@
-import Auth from "@/components/page/Auth";
+import Auth from "@/components/admin/Auth";
 import { Session } from "@supabase/supabase-js";
 import { useEffect, useState } from "react";
 
 import supabase from "supabase.js";
 
 import { Project } from "@/pages";
-import ProjectManagement from "@/components/page/ProjectManagement";
+import ProjectManagement from "@/components/admin/ProjectManagement";
 import Link from "next/link";
 
-export const getServerSideProps = async () => {
-	const { data: projects, error } = await supabase.from("Projects").select("*");
+// export const getServerSideProps = async () => {
+// 	const { data: projects, error } = await supabase.from("Projects").select("*");
 
-	if (error) {
-		console.error(error);
-		return {
-			notFound: true,
-		};
-	}
+// 	if (error) {
+// 		console.error(error);
+// 		return {
+// 			notFound: true,
+// 		};
+// 	}
 
-	return {
-		props: {
-			projects,
-		},
-	};
-};
+// 	return {
+// 		props: {
+// 			projects,
+// 		},
+// 	};
+// };
 
-const Admin = ({ projects }: { projects: Project[] }) => {
+const Admin = () => {
 	const [session, setSession] = useState<Session | null>(null);
+	const [projects, setProjects] = useState<any>([]);
+
+	const [change, setChange] = useState<boolean>(false);
 
 	useEffect(() => {
 		supabase.auth.getSession().then(({ data: { session } }) => {
 			setSession(session);
 		});
 
+		supabase
+			.from("Projects")
+			.select("*")
+			.then(({ data: projects }) => {
+				setProjects(projects);
+			});
+
 		supabase.auth.onAuthStateChange((_event, session) => {
 			setSession(session);
 		});
-	}, []);
+	}, [change]);
 
 	const signOut = async () => {
 		const { error } = await supabase.auth.signOut();
 		if (error) alert(`Error logging out: ${error.message}`);
+	};
+
+	const triggerChange = () => {
+		setChange(!change);
 	};
 
 	return (
@@ -73,7 +87,7 @@ const Admin = ({ projects }: { projects: Project[] }) => {
 					<h1 className="font-primary-bold text-[#DEDEDE] text-[30px] mt-[70px] mb-[70px]">
 						Projects
 					</h1>
-					<ProjectManagement projects={projects} />
+					<ProjectManagement projects={projects} onChange={triggerChange} />
 				</div>
 			) : (
 				<Auth />

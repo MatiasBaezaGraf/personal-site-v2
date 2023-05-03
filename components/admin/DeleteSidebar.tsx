@@ -3,19 +3,19 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import supabase from "supabase.js";
-import SVG from "./SVG";
+import SVG from "../design/SVG";
 
 const DeleteSidebar = ({
 	open,
 	project,
 	close,
+	onDelete,
 }: {
 	open: boolean;
 	project: Project | null;
 	close: () => void;
+	onDelete: () => void;
 }) => {
-	const router = useRouter();
-
 	const [name, setName] = useState<string>("");
 
 	useEffect(() => {
@@ -33,8 +33,8 @@ const DeleteSidebar = ({
 		if (error) {
 			alert(error.message);
 		} else {
+			onDelete();
 			close();
-			router.reload();
 		}
 	};
 

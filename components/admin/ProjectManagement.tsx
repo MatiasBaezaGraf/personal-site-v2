@@ -1,11 +1,17 @@
 import { Project } from "@/pages";
 import { useState } from "react";
-import UpdateSidebar from "../design/UpdateSidebar";
-import DeleteSidebar from "../design/DeleteSidebar";
+import UpdateSidebar from "./UpdateSidebar";
+import DeleteSidebar from "./DeleteSidebar";
 import SVG from "../design/SVG";
-import CreateSidebar from "../design/CreateSidebar";
+import CreateSidebar from "./CreateSidebar";
 
-const ProjectManagement = ({ projects }: { projects: Project[] }) => {
+const ProjectManagement = ({
+	projects,
+	onChange,
+}: {
+	projects: Project[];
+	onChange: () => void;
+}) => {
 	const [currentProject, setCurrentProject] = useState<Project | null>(null);
 	const [openUpdate, setOpenUpdate] = useState<boolean>(false);
 	const [openDelete, setOpenDelete] = useState<boolean>(false);
@@ -131,6 +137,7 @@ const ProjectManagement = ({ projects }: { projects: Project[] }) => {
 				open={openUpdate}
 				project={currentProject}
 				close={() => setOpenUpdate(false)}
+				onUpdate={onChange}
 			/>
 
 			{/* Delete sidebar */}
@@ -138,10 +145,15 @@ const ProjectManagement = ({ projects }: { projects: Project[] }) => {
 				open={openDelete}
 				project={currentProject}
 				close={() => setOpenDelete(false)}
+				onDelete={onChange}
 			/>
 
 			{/* Create sidebar */}
-			<CreateSidebar open={openCreate} close={() => setOpenCreate(false)} />
+			<CreateSidebar
+				open={openCreate}
+				close={() => setOpenCreate(false)}
+				onCreate={onChange}
+			/>
 		</>
 	);
 };

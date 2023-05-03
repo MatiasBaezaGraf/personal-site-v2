@@ -3,28 +3,47 @@ import { useState, useEffect } from "react";
 import { useRouter } from "next/router";
 
 import supabase from "supabase.js";
-import SVG from "./SVG";
+import SVG from "../design/SVG";
 
-const CreateSidebar = ({
+const UpdateSidebar = ({
 	open,
+	project,
 	close,
+	onUpdate,
 }: {
 	open: boolean;
+	project: Project | null;
 	close: () => void;
+	onUpdate: () => void;
 }) => {
-	const router = useRouter();
-
 	const [name, setName] = useState<string>("");
-	const [description, setDescription] = useState<string>("");
-	const [technologies, setTechnologies] = useState<string>("");
+	const [description, setDescription] = useState<string>(
+		project?.description || ""
+	);
+	const [technologies, setTechnologies] = useState<string>(
+		project?.technologies || ""
+	);
 	const [featured, setFeatured] = useState<boolean>(false);
 	const [visitUrl, setVisitUrl] = useState<string>("");
 	const [githubUrl, setGithubUrl] = useState<string>("");
 	const [imagePath, setImagePath] = useState<string>("");
 
-	const createProject = async () => {
-		const { data, error } = await supabase.from("Projects").insert([
-			{
+	useEffect(() => {
+		if (project) {
+			setName(project.name);
+			setDescription(project.description);
+			setTechnologies(project.technologies);
+			setFeatured(project.featured);
+			setVisitUrl(project.visitUrl);
+			setGithubUrl(project.githubUrl);
+			setImagePath(project.imagePath);
+		}
+	}, [project]);
+
+	const updateProject = async () => {
+		const { data, error } = await supabase
+			.from("Projects")
+			.update({
 				name,
 				description,
 				technologies,
@@ -32,27 +51,27 @@ const CreateSidebar = ({
 				visitUrl,
 				githubUrl,
 				imagePath,
-			},
-		]);
+			})
+			.eq("id", project?.id);
 
 		if (error) {
 			alert(error.message);
 		} else {
+			onUpdate();
 			close();
-			router.reload();
 		}
 	};
 
 	return (
 		<div>
 			<div
-				className={`transform duration-[400ms] right-0 top-0 fixed h-screen bg-[#282828] z-30  ${
+				className={`transform duration-[400ms] right-0 top-0 fixed h-screen bg-[#282828] z-30 ${
 					open ? "translate-x-0" : "translate-x-[1500px]"
 				}  w-2/3 laptop:w-2/5`}
 			>
 				<div className="flex flex-row items-center justify-between">
 					<h1 className="font-primary-bold text-[#DEDEDE] text-[25px] text-start p-[20px]">
-						New Project
+						Edit Project
 					</h1>
 					<button onClick={close}>
 						<SVG type="close" />
@@ -125,7 +144,7 @@ const CreateSidebar = ({
 							onChange={(e) => setGithubUrl(e.target.value)}
 						/>
 					</div>
-					<div className="flex flex-row justify-between mb-[25px]">
+					{/* <div className="flex flex-row justify-between mb-[25px]">
 						<h1 className="font-primary-medium text-[#838383] text-[15px] py-[11px] px-[20px]">
 							Image Path
 						</h1>
@@ -135,12 +154,12 @@ const CreateSidebar = ({
 							className="w-3/5 font-primary-medium bg-transparent text-[#DEDEDE] bg-[#222222] placeholder-[#636363] text-[15px] p-[11px] border-b-[2px] border-[#838383] focus:outline-none focus:border-[#FFB800] mr-[20px]"
 							onChange={(e) => setImagePath(e.target.value)}
 						/>
-					</div>
+					</div> */}
 					<button
-						onClick={createProject}
+						onClick={updateProject}
 						className="flex flex-row justify-center transform duration-[200ms] bg-main-gradient px-[50px] py-[12px] rounded-md hover:scale-105 w-[120px] mx-[20px]"
 					>
-						<h1 className="font-primary-bold text-[14px] text-black">Create</h1>
+						<h1 className="font-primary-bold text-[14px] text-black">Update</h1>
 					</button>
 				</div>
 			</div>
@@ -155,4 +174,4 @@ const CreateSidebar = ({
 	);
 };
 
-export default CreateSidebar;
+export default UpdateSidebar;

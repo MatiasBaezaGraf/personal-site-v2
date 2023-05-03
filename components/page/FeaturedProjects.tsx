@@ -26,7 +26,7 @@ const FeaturedProjects = ({ projects }: { projects: Project[] }) => {
 							hover:scale-105"
 						>
 							<Image
-								src={`/projects/${project.imagePath}.png`}
+								src={`/projects/${project.imagePath}`}
 								alt={project.name}
 								width={520}
 								height={250}
