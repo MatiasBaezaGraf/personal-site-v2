@@ -4,20 +4,31 @@ import UpdateSidebar from "./UpdateSidebar";
 import DeleteSidebar from "./DeleteSidebar";
 import SVG from "../design/SVG";
 import CreateSidebar from "./CreateSidebar";
+import Image from "next/image";
 
 const ProjectManagement = ({
 	projects,
 	onChange,
+	images,
 }: {
 	projects: Project[];
 	onChange: () => void;
+	images: any;
 }) => {
 	const [currentProject, setCurrentProject] = useState<Project | null>(null);
+	const [currentImage, setCurrentImage] = useState<any>(null);
 	const [openUpdate, setOpenUpdate] = useState<boolean>(false);
 	const [openDelete, setOpenDelete] = useState<boolean>(false);
 	const [openCreate, setOpenCreate] = useState<boolean>(false);
 
+	const cdnUrl = process.env.NEXT_PUBLIC_SUPABASE_CDN_URL;
+
 	const updateProject = (project: Project) => {
+		const image = images.find(({ name }: { name: string }) => {
+			return name === project.imagePath;
+		});
+
+		setCurrentImage(image);
 		setCurrentProject(project);
 		setOpenUpdate(true);
 	};
@@ -81,7 +92,7 @@ const ProjectManagement = ({
 								<h1 className="font-primary-bold text-[18px]">Github URL</h1>
 							</div>
 							<div className="h-[50px] truncate p-[15px] flex flex-row items-start border-x-[1px] border-[#393939]">
-								<h1 className="font-primary-bold text-[18px]">Image Name</h1>
+								<h1 className="font-primary-bold text-[18px]">Image</h1>
 							</div>
 						</div>
 					</div>
@@ -123,8 +134,18 @@ const ProjectManagement = ({
 								<div className="h-[50px] truncate p-[15px] text-[13px] flex flex-row items-start border-l-[1px] border-[#393939]">
 									{project.githubUrl}
 								</div>
-								<div className="h-[50px] truncate p-[15px] text-[13px] flex flex-row items-start border-x-[1px] border-[#393939]">
-									{project.imagePath}
+								<div className="h-[50px] truncate p-[3px] text-[13px] flex flex-row items-start border-x-[1px] border-[#393939]">
+									{project.imagePath ? (
+										<Image
+											src={cdnUrl + project.imagePath}
+											width={430}
+											height={440}
+											alt={project.name}
+											className="object-cover"
+										/>
+									) : (
+										<h1 className="self-center p-[15px]">No Image</h1>
+									)}
 								</div>
 							</div>
 						</div>

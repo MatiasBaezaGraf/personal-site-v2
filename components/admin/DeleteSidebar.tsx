@@ -25,26 +25,25 @@ const DeleteSidebar = ({
 	}, [project]);
 
 	const deleteProject = async () => {
-		// const { data, error } = await supabase
-		// 	.from("Projects")
-		// 	.delete()
-		// 	.eq("id", project?.id);
+		//Delete the project from the database
+		const { data, error } = await supabase
+			.from("Projects")
+			.delete()
+			.eq("id", project?.id);
 
-		const res = await fetch("/api/delete", {
-			method: "POST",
-			body: JSON.stringify({
-				imageName: project?.imagePath,
-			}),
-		});
-		const data = await res.json();
-		console.log(data);
+		//Delete the project's image from the storage
+		const { data: image, error: imageError } = await supabase.storage
+			.from("projectImages")
+			.remove(["images/" + project?.imagePath!]);
 
-		// if (error) {
-		// 	alert(error.message);
-		// } else {
-		// 	onDelete();
-		// 	close();
-		// }
+		if (error) {
+			alert(error.message);
+		} else if (imageError) {
+			alert(imageError.message);
+		} else {
+			onDelete();
+			close();
+		}
 	};
 
 	return (

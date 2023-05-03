@@ -9,26 +9,11 @@ import ProjectManagement from "@/components/admin/ProjectManagement";
 import Link from "next/link";
 import Head from "next/head";
 
-// export const getServerSideProps = async () => {
-// 	const { data: projects, error } = await supabase.from("Projects").select("*");
-
-// 	if (error) {
-// 		console.error(error);
-// 		return {
-// 			notFound: true,
-// 		};
-// 	}
-
-// 	return {
-// 		props: {
-// 			projects,
-// 		},
-// 	};
-// };
-
 const Admin = () => {
 	const [session, setSession] = useState<Session | null>(null);
+
 	const [projects, setProjects] = useState<any>([]);
+	const [images, setImages] = useState<any>([]);
 
 	const [change, setChange] = useState<boolean>(false);
 
@@ -42,6 +27,13 @@ const Admin = () => {
 			.select("*")
 			.then(({ data: projects }) => {
 				setProjects(projects);
+			});
+
+		supabase.storage
+			.from("projectImages")
+			.list("images")
+			.then(({ data: images }) => {
+				setImages(images);
 			});
 
 		supabase.auth.onAuthStateChange((_event, session) => {
@@ -98,7 +90,11 @@ const Admin = () => {
 						<h1 className="font-primary-bold text-[#DEDEDE] text-[30px] mt-[70px] mb-[70px]">
 							Projects
 						</h1>
-						<ProjectManagement projects={projects} onChange={triggerChange} />
+						<ProjectManagement
+							projects={projects}
+							onChange={triggerChange}
+							images={images}
+						/>
 					</div>
 				) : (
 					<Auth />

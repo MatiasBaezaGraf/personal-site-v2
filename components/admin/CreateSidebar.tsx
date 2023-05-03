@@ -19,16 +19,16 @@ const CreateSidebar = ({
 	const [description, setDescription] = useState<string>("");
 	const [technologies, setTechnologies] = useState<string>("");
 	const [featured, setFeatured] = useState<boolean>(false);
-	const [visitUrl, setVisitUrl] = useState<string>("");
-	const [githubUrl, setGithubUrl] = useState<string>("");
+	const [visitUrl, setVisitUrl] = useState<string | null>("");
+	const [githubUrl, setGithubUrl] = useState<string | null>("");
 
 	useEffect(() => {
 		setName("");
 		setDescription("");
 		setTechnologies("");
 		setFeatured(false);
-		setVisitUrl("");
-		setGithubUrl("");
+		setVisitUrl(null);
+		setGithubUrl(null);
 	}, [open]);
 
 	const createProject = async (imagePath: string) => {

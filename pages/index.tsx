@@ -27,6 +27,9 @@ export type Project = {
 
 export const getServerSideProps = async () => {
 	const { data: projects, error } = await supabase.from("Projects").select("*");
+	const { data: images, error: imagesError } = await supabase.storage
+		.from("projectImages")
+		.list("images");
 
 	if (error) {
 		console.error(error);
@@ -38,14 +41,15 @@ export const getServerSideProps = async () => {
 	return {
 		props: {
 			projects,
+			images,
 		},
 	};
 };
 
-const Home = ({ projects }: { projects: Project[] }) => {
+const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 	//The first time the page loads, the intro animation plays, and then the page is loaded.
 
-	//Thist first state exists to prevent the page from loading before the intro animation is finished.
+	//This first state exists to prevent the page from loading before the intro animation is finished.
 	//The page with content is in display:hidden until the intro animation is finished.
 	const [loaded, setLoaded] = useState(false);
 
@@ -271,7 +275,7 @@ const Home = ({ projects }: { projects: Project[] }) => {
 					>
 						Highlighted Projects
 					</h1>
-					<FeaturedProjects projects={projects} />
+					<FeaturedProjects projects={projects} images={images} />
 				</div>
 
 				{/* ------------------------------------------------------------- Other Projects ------------------------------------------------------------- */}

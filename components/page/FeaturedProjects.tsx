@@ -2,8 +2,16 @@ import Image from "next/image";
 import { Project } from "@/pages";
 import ProjectButton from "@/components/design/ProjectButton";
 
-const FeaturedProjects = ({ projects }: { projects: Project[] }) => {
+const FeaturedProjects = ({
+	projects,
+	images,
+}: {
+	projects: Project[];
+	images: any[];
+}) => {
 	const featuredProjects = projects.filter((project) => project.featured);
+
+	const cdnUrl = process.env.NEXT_PUBLIC_SUPABASE_CDN_URL;
 
 	const isOdd = (num: number) => num % 2;
 
@@ -26,7 +34,7 @@ const FeaturedProjects = ({ projects }: { projects: Project[] }) => {
 							hover:scale-105"
 						>
 							<Image
-								src={`/projects/${project.imagePath}`}
+								src={cdnUrl + project.imagePath}
 								alt={project.name}
 								width={520}
 								height={250}
