@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { useEffect, useState } from "react";
 import Sidebar from "./Sidebar";
+import Link from "next/link";
 
 //Scroll direction hook
 function useScrollDirection() {
@@ -47,13 +48,15 @@ const Navbar = ({ className }: { className?: string }) => {
 					
 				`}
 			>
-				<Image
-					src="/icons/Logo.png"
-					alt="Logo"
-					width={75}
-					height={75}
-					className="left-0 object-contain h-[75px] w-[75px]"
-				/>
+				<Link href="/admin">
+					<Image
+						src="/icons/Logo.png"
+						alt="Logo"
+						width={75}
+						height={75}
+						className="left-0 object-contain h-[75px] w-[75px]"
+					/>
+				</Link>
 				<div
 					className="
 					hidden 
