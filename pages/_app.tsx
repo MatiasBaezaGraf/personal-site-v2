@@ -7,8 +7,14 @@ export default function App({ Component, pageProps }: AppProps) {
 		<>
 			{" "}
 			<Component {...pageProps} />
-			<Script src="/scripts/particles.js"></Script>
-			<Script src="/scripts/app.js"></Script>
+			<Script
+				src="/scripts/particles.js"
+				onLoad={() => console.log("particles.js script loaded")}
+			></Script>
+			<Script
+				src="/scripts/app.js"
+				onLoad={() => console.log("app.js script loaded")}
+			></Script>
 		</>
 	);
 }
