@@ -81,9 +81,6 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 
-			<Script src="/scripts/particles.js"></Script>
-			<Script src="/scripts/app.js"></Script>
-
 			<div
 				className={`${
 					loaded ? "hidden" : "flex"
@@ -98,6 +95,9 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 					loaded ? "opacity-1" : "opacity-0"
 				}`}
 			></div>
+
+			<Script src="/scripts/particles.js"></Script>
+			<Script src="/scripts/app.js"></Script>
 
 			{/* Fixed elements */}
 			<Navbar
@@ -357,7 +357,7 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 						Developed by Matias Baeza Graf | 2023
 					</h5>
 				</div>
-				{/* <Gallery /> */}
+				<Gallery />
 			</main>
 		</>
 	);

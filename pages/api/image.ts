@@ -1,52 +1,52 @@
-import { NextApiHandler, NextApiRequest } from "next";
+// import { NextApiHandler, NextApiRequest } from "next";
 
-import formidable from "formidable";
-import path from "path";
-import fs from "fs/promises";
+// import formidable from "formidable";
+// import path from "path";
+// import fs from "fs/promises";
 
-export const config = {
-	api: {
-		bodyParser: false,
-	},
-};
+// export const config = {
+// 	api: {
+// 		bodyParser: false,
+// 	},
+// };
 
-const readFile = (
-	req: NextApiRequest,
-	saveLocally?: boolean
-): Promise<{ fields: formidable.Fields; files: formidable.Files }> => {
-	const options: formidable.Options = {};
-	if (saveLocally) {
-		options.uploadDir = path.join(process.cwd(), "/public/projects");
-		options.filename = (name, ext, path, form) => {
-			return path.originalFilename!;
-		};
-	}
+// const readFile = (
+// 	req: NextApiRequest,
+// 	saveLocally?: boolean
+// ): Promise<{ fields: formidable.Fields; files: formidable.Files }> => {
+// 	const options: formidable.Options = {};
+// 	if (saveLocally) {
+// 		options.uploadDir = path.join(process.cwd(), "/public/projects");
+// 		options.filename = (name, ext, path, form) => {
+// 			return path.originalFilename!;
+// 		};
+// 	}
 
-	const form = formidable(options);
-	return new Promise((resolve, reject) => {
-		form.parse(req, (err, fields, files) => {
-			if (err) return reject(err);
-			resolve({ fields, files });
-		});
-	});
-};
+// 	const form = formidable(options);
+// 	return new Promise((resolve, reject) => {
+// 		form.parse(req, (err, fields, files) => {
+// 			if (err) return reject(err);
+// 			resolve({ fields, files });
+// 		});
+// 	});
+// };
 
-const handler: NextApiHandler = async (req, res) => {
-	try {
-		await fs.readdir(path.join(process.cwd(), "/public/projects"));
-	} catch (error) {
-		await fs.mkdir(path.join(process.cwd(), "/public/projects"));
-	}
+// const handler: NextApiHandler = async (req, res) => {
+// 	try {
+// 		await fs.readdir(path.join(process.cwd(), "/public/projects"));
+// 	} catch (error) {
+// 		await fs.mkdir(path.join(process.cwd(), "/public/projects"));
+// 	}
 
-	switch (req.method) {
-		case "POST":
-			await readFile(req, true);
-			res.json({ message: "Uploaded Image!" });
-			break;
-		default:
-			res.json({ message: "Method not allowed or specified!" });
-			break;
-	}
-};
+// 	switch (req.method) {
+// 		case "POST":
+// 			await readFile(req, true);
+// 			res.json({ message: "Uploaded Image!" });
+// 			break;
+// 		default:
+// 			res.json({ message: "Method not allowed or specified!" });
+// 			break;
+// 	}
+// };
 
-export default handler;
+// export default handler;
