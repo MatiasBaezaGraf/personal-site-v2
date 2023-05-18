@@ -79,9 +79,10 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
-				<Script src="/scripts/particles.js"></Script>
-				<Script src="/scripts/app.js"></Script>
 			</Head>
+
+			<Script src="/scripts/particles.js"></Script>
+			<Script src="/scripts/app.js"></Script>
 
 			<div
 				className={`${
