@@ -13,6 +13,7 @@ import Experience from "@/components/page/Experience";
 
 import IntroAnimation from "@/components/design/IntroAnimation";
 import { useState } from "react";
+import Gallery from "@/components/design/Gallery";
 
 export type Project = {
 	id: string;
@@ -77,6 +78,8 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
+				<script src="/scripts/particles.js"></script>
+				<script src="/scripts/app.js"></script>
 			</Head>
 
 			<div
@@ -86,6 +89,13 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 			>
 				<IntroAnimation onStopPlaying={loadIn} />
 			</div>
+
+			<div
+				id="particles-js"
+				className={`fixed transform duration-[500ms] ${
+					loaded ? "opacity-1" : "opacity-0"
+				}`}
+			></div>
 
 			{/* Fixed elements */}
 			<Navbar
@@ -114,7 +124,7 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				/>
 			</a>
 			{/* Scrollable section */}
-			<main className={`${loaded ? "block" : "hidden"} bg-[#010010] snap-y`}>
+			<main className={`${loaded ? "block" : "hidden"} bg-[#010010] z-20`}>
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
 				<div
 					id="home"
@@ -345,6 +355,7 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 						Developed by Matias Baeza Graf | 2023
 					</h5>
 				</div>
+				{/* <Gallery /> */}
 			</main>
 		</>
 	);
