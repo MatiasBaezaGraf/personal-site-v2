@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Script from "next/script";
 import Image from "next/image";
 import supabase from "supabase.js";
 
@@ -78,8 +79,8 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				/>
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
-				<script src="/scripts/particles.js"></script>
-				<script src="/scripts/app.js"></script>
+				<Script src="/scripts/particles.js"></Script>
+				<Script src="/scripts/app.js"></Script>
 			</Head>
 
 			<div
