@@ -96,9 +96,6 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				}`}
 			></div>
 
-			<Script src="/scripts/particles.js"></Script>
-			<Script src="/scripts/app.js"></Script>
-
 			{/* Fixed elements */}
 			<Navbar
 				className={`transform duration-[500ms] ${
@@ -358,6 +355,8 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 					</h5>
 				</div>
 				<Gallery />
+				<Script src="/scripts/particles.js"></Script>
+				<Script src="/scripts/app.js"></Script>
 			</main>
 		</>
 	);

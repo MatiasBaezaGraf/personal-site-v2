@@ -12,13 +12,13 @@ particlesJS.load('particles-js', 'particles.json', function() {
 /* Otherwise just put the config content (json): */
 
 console.log("particles.js loaded - callback");
-particlesJS(
+window.particlesJS(
 	"particles-js",
 
 	{
 		particles: {
 			number: {
-				value: 70,
+				value: 80,
 				density: {
 					enable: true,
 					value_area: 800,
