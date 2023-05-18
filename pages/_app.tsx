@@ -10,6 +10,7 @@ export default function App({ Component, pageProps }: AppProps) {
 			<Script
 				src="/scripts/particles.js"
 				onLoad={() => console.log("particles.js script loaded")}
+				strategy="beforeInteractive"
 			></Script>
 			<Script
 				src="/scripts/app.js"
