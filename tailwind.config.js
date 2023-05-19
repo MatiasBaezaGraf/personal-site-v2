@@ -21,6 +21,7 @@ module.exports = {
 				"primary-extra-bold": ["ExtraBold", "sans-serif"],
 			},
 			backgroundImage: {
+				"featured-projects": "linear-gradient(0deg, #06022b 50%, #010010 50%);",
 				"main-gradient": `linear-gradient(90deg, #FF5400, #FFB800)`,
 				landscape: "url('../public/images/Landscape.jpg')",
 				landscape2: "url('../public/images/Landscape2.jpg')",
