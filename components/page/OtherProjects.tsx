@@ -32,24 +32,25 @@ const OtherProjects = ({ projects }: { projects: Project[] }) => {
 								</p>
 							</div>
 							<div>
-								<div className="flex flex-row mt-[20px] px-[20px]">
-									{project.visitUrl != null && (
-										<ProjectButton
-											url={project.visitUrl}
-											purpose="visit"
-											format="large"
-											className="ml-[5px]"
-										/>
-									)}
-									{project.githubUrl != null && (
-										<ProjectButton
-											url={project.githubUrl}
-											purpose="github"
-											format="large"
-										/>
-									)}
-								</div>
-								<div className="w-full mt-[20px] border-t-[2px] border-[#838383] p-[15px]">
+								<div className="w-full mt-[20px] bg-[#07143f] p-[15px]">
+									<div className="flex flex-row mb-[25px]">
+										{project.visitUrl != null && (
+											<ProjectButton
+												url={project.visitUrl}
+												purpose="visit"
+												format="large"
+												className="ml-[5px]"
+											/>
+										)}
+										{project.githubUrl != null && (
+											<ProjectButton
+												url={project.githubUrl}
+												purpose="github"
+												format="large"
+											/>
+										)}
+									</div>
+
 									<h5 className="font-primary-regular text-[#838383] text-[13px] ">
 										{project.technologies}
 									</h5>

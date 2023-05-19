@@ -89,6 +89,8 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				<IntroAnimation onStopPlaying={loadIn} />
 			</div>
 
+			{/* Fixed elements */}
+
 			<div
 				id="particles-js"
 				className={`fixed transform duration-[500ms] ${
@@ -96,7 +98,6 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				}`}
 			></div>
 
-			{/* Fixed elements */}
 			<Navbar
 				className={`transform duration-[500ms] ${
 					loaded ? "opacity-100" : "opacity-0 -translate-y-[50px]"
@@ -270,21 +271,20 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				{/* ------------------------------------------------------------- Featured Projects ------------------------------------------------------------- */}
 				<div
 					id="work"
-					className="
-					px-[12px] 
-					tablet:px-[100px]
-					laptop:px-[20vw]"
+					className="flex flex-col items-center
+					"
 				>
 					<h1
 						className="font-primary-bold text-[#DEDEDE] pt-[90px] pb-[30px]
-						text-[36px]
-						tablet:text-[48px]
-						laptop:text-[36px]
+						text-[36px] px-[12px] 
+						tablet:text-[48px] tablet:px-[100px]
+						laptop:text-[36px] laptop:px-[20vw]
 					"
 					>
 						Highlighted Projects
 					</h1>
-					<FeaturedProjects projects={projects} images={images} />
+					<Gallery projects={projects} />
+					{/* <FeaturedProjects projects={projects} images={images} /> */}
 				</div>
 
 				{/* ------------------------------------------------------------- Other Projects ------------------------------------------------------------- */}
@@ -354,7 +354,7 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 						Developed by Matias Baeza Graf | 2023
 					</h5>
 				</div>
-				<Gallery />
+				<Gallery projects={projects} />
 			</main>
 		</>
 	);

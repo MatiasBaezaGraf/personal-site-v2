@@ -80,12 +80,6 @@ const FeaturedProjects = ({
 
 					{/* Mobile View */}
 					<div className="laptop:hidden relative mb-[30px]">
-						<Image
-							src={`/projects/${project.imagePath}.png`}
-							alt={project.name}
-							fill={true}
-							className="object-cover w-full h-full z-0"
-						/>
 						<div className="relative flex flex-col top-0 left-0 w-full h-full z-10 bg-[#030120]/90 border-[#838383] border-[2px] p-[15px]">
 							<h1 className="font-primary-bold text-[#DEDEDE] text-[32px]">
 								{project.name}
