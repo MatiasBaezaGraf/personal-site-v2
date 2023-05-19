@@ -354,7 +354,6 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 						Developed by Matias Baeza Graf | 2023
 					</h5>
 				</div>
-				<Gallery projects={projects} />
 			</main>
 		</>
 	);
