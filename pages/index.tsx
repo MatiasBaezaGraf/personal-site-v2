@@ -14,7 +14,7 @@ import Experience from "@/components/page/Experience";
 
 import IntroAnimation from "@/components/design/IntroAnimation";
 import { useState } from "react";
-import Gallery from "@/components/design/Gallery";
+import Gallery from "@/components/page/Gallery";
 
 export type Project = {
 	id: string;
@@ -275,7 +275,7 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 					"
 				>
 					<h1
-						className="font-primary-bold text-[#DEDEDE] pt-[90px] pb-[30px]
+						className="font-primary-bold text-[#DEDEDE] pt-[60px] pb-[60px]
 						text-[36px] px-[12px] 
 						tablet:text-[48px] tablet:px-[100px]
 						laptop:text-[36px] laptop:px-[20vw]
@@ -284,7 +284,7 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 						Highlighted Projects
 					</h1>
 					<Gallery projects={projects} />
-					{/* <FeaturedProjects projects={projects} images={images} /> */}
+					<FeaturedProjects projects={projects} />
 				</div>
 
 				{/* ------------------------------------------------------------- Other Projects ------------------------------------------------------------- */}

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Project } from "@/pages";
 import { useEffect, useState } from "react";
-import ProjectButton from "./ProjectButton";
+import ProjectButton from "../design/ProjectButton";
 
 const Gallery = ({ projects }: { projects: Project[] }) => {
 	const cdnUrl = process.env.NEXT_PUBLIC_SUPABASE_CDN_URL;
@@ -14,7 +14,7 @@ const Gallery = ({ projects }: { projects: Project[] }) => {
 	const [entertimeoutId, setEnterTimeoutId] = useState<any | null>(null);
 
 	return (
-		<section className="flex desktop:w-[1700px] laptop:w-[1400px] h-[500px]">
+		<section className="hidden laptop:flex desktop:w-[1700px] laptop:w-[1400px] h-[500px]">
 			{orderedProjects.map((project) => (
 				<div
 					onMouseEnter={() => {
@@ -49,7 +49,7 @@ const Gallery = ({ projects }: { projects: Project[] }) => {
 							{project.name}
 						</h1>
 						<p
-							className={`transform duration-[100ms] text-[#838383] text-[16px] leading-[30px] bg-black/80 p-[10px] z-0 ${
+							className={`transform duration-[100ms] text-[#949494] text-[16px] leading-[30px] bg-black/90 p-[15px] z-0 ${
 								project.id == activeProject ? "text-[16px]" : "text-[1px]"
 							}`}
 						>

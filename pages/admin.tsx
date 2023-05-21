@@ -61,6 +61,7 @@ const Admin = () => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
+			<div id="particles-js" className="hidden"></div>
 			<div>
 				{session ? (
 					<div className="w-screen min-h-screen bg-[#010010] p-[30px] text-center">

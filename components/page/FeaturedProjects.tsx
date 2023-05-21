@@ -2,13 +2,7 @@ import Image from "next/image";
 import { Project } from "@/pages";
 import ProjectButton from "@/components/design/ProjectButton";
 
-const FeaturedProjects = ({
-	projects,
-	images,
-}: {
-	projects: Project[];
-	images: any[];
-}) => {
+const FeaturedProjects = ({ projects }: { projects: Project[] }) => {
 	const featuredProjects = projects.filter((project) => project.featured);
 
 	const cdnUrl = process.env.NEXT_PUBLIC_SUPABASE_CDN_URL;
@@ -24,8 +18,8 @@ const FeaturedProjects = ({
 			{orderedProjects.map((project, index) => (
 				<div key={project.id}>
 					{/* Desktop View */}
-					<div
-						className={`hidden laptop:flex justify-between mb-[100px] ${
+					{/* <div
+						className={`flex laptop:hidden justify-between mb-[100px] ${
 							isOdd(index) ? "flex-row-reverse" : "flex-row"
 						}`}
 					>
@@ -76,11 +70,11 @@ const FeaturedProjects = ({
 								)}
 							</div>
 						</div>
-					</div>
+					</div> */}
 
 					{/* Mobile View */}
-					<div className="laptop:hidden relative mb-[30px]">
-						<div className="relative flex flex-col top-0 left-0 w-full h-full z-10 bg-[#030120]/90 border-[#838383] border-[2px] p-[15px]">
+					<div className="laptop:hidden relative mb-[30px] px-[20px] tablet:px-[90px]">
+						<div className="relative flex flex-col top-0 left-0 w-full h-full z-10 bg-featured-projects tablet:bg-featured-tablet-projects border-[#838383] border-[2px] p-[15px]">
 							<h1 className="font-primary-bold text-[#DEDEDE] text-[32px]">
 								{project.name}
 							</h1>
