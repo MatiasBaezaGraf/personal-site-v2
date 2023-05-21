@@ -62,34 +62,34 @@ const Navbar = ({ className }: { className?: string }) => {
 					hidden 
 					laptop:flex flex-row"
 				>
-					<a className="px-[20px]" href="#about">
+					<a className="px-[20px] py-[10px] rounded-full" href="#about">
 						<h1
 							className="font-primary-medium text-[18px] text-[#DEDEDE] 
-							transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
+							transform duration-[200ms] hover:text-gradient"
 						>
 							About
 						</h1>
 					</a>
-					<a className="px-[20px]" href="#experience">
+					<a className="px-[20px] py-[10px] rounded-full" href="#experience">
 						<h1
 							className="font-primary-medium text-[18px] text-[#DEDEDE] 
-							transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
+							transform duration-[200ms]  hover:text-gradient"
 						>
 							Experience
 						</h1>
 					</a>
-					<a className="px-[20px]" href="#work">
+					<a className="px-[20px] py-[10px] rounded-full" href="#work">
 						<h1
 							className="font-primary-medium text-[18px] text-[#DEDEDE] 
-							transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
+							transform duration-[200ms]  hover:text-gradient"
 						>
 							Work
 						</h1>
 					</a>
-					<a className="px-[20px]" href="#contact">
+					<a className="px-[20px] py-[10px] rounded-full" href="#contact">
 						<h1
 							className="font-primary-medium text-[18px] text-[#DEDEDE] 
-							transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
+							transform duration-[200ms]  hover:text-gradient "
 						>
 							Contact
 						</h1>

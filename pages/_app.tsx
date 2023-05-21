@@ -7,6 +7,11 @@ export default function App({ Component, pageProps }: AppProps) {
 		<>
 			{" "}
 			<Component {...pageProps} />
+			<Script
+				src="/scripts/cursor.js"
+				onLoad={() => console.log("particles.js script loaded")}
+				strategy="beforeInteractive"
+			></Script>
 			{/* particles.js defines a global variable named particlesJS, used in app.js therefore we need to load particles.js before app.js */}
 			<Script
 				src="/scripts/particles.js"

@@ -8,7 +8,7 @@ const Decoration = ({ className }: { className?: string }) => {
 		>
 			<div className="w-[2px] bg-[#838383] h-screen rounded-b-full mb-[20px]"></div>
 			<a
-				className="z-20 my-[20px]"
+				className="z-20 py-[20px] rounded-full"
 				target="_blank"
 				href="https://github.com/MatiasBaezaGraf"
 			>
@@ -17,11 +17,11 @@ const Decoration = ({ className }: { className?: string }) => {
 					alt="Logo"
 					width={20}
 					height={20}
-					className="transform duration-[200ms] hover:-translate-y-[4px] hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
+					className="transform duration-[200ms]  hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
 				/>
 			</a>
 			<a
-				className="z-20 my-[20px]"
+				className="z-20 py-[20px] rounded-full"
 				target="_blank"
 				href="https://ig.me/m/matibaezagraf"
 			>
@@ -30,11 +30,11 @@ const Decoration = ({ className }: { className?: string }) => {
 					alt="Logo"
 					width={20}
 					height={20}
-					className="transform duration-[200ms] hover:-translate-y-[4px] hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
+					className="transform duration-[200ms]  hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
 				/>
 			</a>
 			<a
-				className="z-20 my-[20px]"
+				className="z-20 py-[20px] rounded-full"
 				target="_blank"
 				href="https://twitter.com/matibaezagraf"
 			>
@@ -43,12 +43,12 @@ const Decoration = ({ className }: { className?: string }) => {
 					alt="Logo"
 					width={20}
 					height={20}
-					className="transform duration-[200ms] hover:-translate-y-[4px] hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
+					className="transform duration-[200ms]  hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
 				/>
 			</a>
 
 			<a
-				className="z-20 my-[20px]"
+				className="z-20 py-[20px] rounded-full"
 				target="_blank"
 				href="https://www.linkedin.com/in/matias-baeza-graf-28781a224"
 			>
@@ -57,7 +57,7 @@ const Decoration = ({ className }: { className?: string }) => {
 					alt="Logo"
 					width={20}
 					height={20}
-					className="transform duration-[200ms] hover:-translate-y-[4px] hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
+					className="transform duration-[200ms]  hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
 				/>
 			</a>
 			<div className="w-[2px] bg-[#838383] h-screen rounded-t-full mt-[20px]" />

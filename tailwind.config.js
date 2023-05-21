@@ -25,6 +25,7 @@ module.exports = {
 				"featured-tablet-projects":
 					"linear-gradient(0deg, #06022b 20%, #010010 20%);",
 				"main-gradient": `linear-gradient(90deg, #FF5400, #FFB800)`,
+				"secondary-gradient": `linear-gradient(90deg, rgba(255, 84, 0, 0.6), rgba(255, 184, 0, 0.6))`,
 				landscape: "url('../public/images/Landscape.jpg')",
 				landscape2: "url('../public/images/Landscape2.jpg')",
 				landscape3: "url('../public/images/Landscape3.jpg')",

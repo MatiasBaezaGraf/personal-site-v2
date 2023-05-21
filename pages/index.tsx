@@ -80,7 +80,6 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
-
 			<div
 				className={`${
 					loaded ? "hidden" : "flex"
@@ -89,15 +88,14 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				<IntroAnimation onStopPlaying={loadIn} />
 			</div>
 
+			<div className="cursor"></div>
 			{/* Fixed elements */}
-
 			<div
 				id="particles-js"
 				className={`fixed transform duration-[500ms] ${
 					loaded ? "opacity-1" : "opacity-0"
 				}`}
 			></div>
-
 			<Navbar
 				className={`transform duration-[500ms] ${
 					loaded ? "opacity-100" : "opacity-0 -translate-y-[50px]"
@@ -108,7 +106,6 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 					loaded ? "opacity-100" : "opacity-0 translate-x-[50px]"
 				}`}
 			/>
-
 			<a
 				href="mailto:matiasbaezagraf@gmail.com"
 				className="hidden tablet:block"
@@ -124,7 +121,8 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				/>
 			</a>
 			{/* Scrollable section */}
-			<main className={`${loaded ? "block" : "hidden"} bg-[#010010] z-20`}>
+
+			<main className={`${loaded ? "block" : "hidden"} bg-[#010010]   z-20`}>
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
 				<div
 					id="home"
