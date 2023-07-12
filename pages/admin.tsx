@@ -4,7 +4,6 @@ import { useEffect, useState } from "react";
 
 import supabase from "supabase.js";
 
-import { Project } from "@/pages";
 import ProjectManagement from "@/components/admin/ProjectManagement";
 import Link from "next/link";
 import Head from "next/head";
@@ -77,7 +76,7 @@ const Admin = () => {
 							</button>
 
 							<button>
-								<Link href="/">
+								<Link href="https://www.matiasbaezagraf.com/">
 									<h1
 										className="font-primary-medium text-[18px] text-[#DEDEDE] 
                         		transform duration-[200ms] hover:-translate-y-[5px] hover:text-gradient"
