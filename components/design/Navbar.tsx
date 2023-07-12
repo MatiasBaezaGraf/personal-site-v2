@@ -48,7 +48,7 @@ const Navbar = ({ className }: { className?: string }) => {
 					
 				`}
 			>
-				<Link href="/admin">
+				<Link href="/admin" className="rounded">
 					<Image
 						src="/icons/Logo.png"
 						alt="Logo"

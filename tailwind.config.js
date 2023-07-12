@@ -7,6 +7,9 @@ module.exports = {
 	],
 	theme: {
 		extend: {
+			colors: {
+				gradient: `linear-gradient(90deg, #FF5400, #FFB800)`,
+			},
 			screens: {
 				phone: "390px",
 				tablet: "700px",

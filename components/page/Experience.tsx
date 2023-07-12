@@ -130,8 +130,8 @@ const Experience = () => {
 								width={10}
 								height={10}
 							/>
-							Develop various integrations of third party services such as AWS
-							and Redsys, not supported by Velo with Wix Websites.
+							Develop various integrations of third party services such as AWS,
+							Redsys and Payphone, not supported natively by Wix Websites.
 						</p>
 						<p className="font-primary-medium text-[#838383] text-[17px] leading-[30px] pb-[12px] flex flex-row items-start">
 							<Image
@@ -152,8 +152,8 @@ const Experience = () => {
 								width={10}
 								height={10}
 							/>
-							Develop custom solutions to satisfy a wide variety of customers
-							with a multi-disciplinary team.
+							Build solutions that heavily rely on web services for seamless
+							integration and data exchange between different applications.
 						</p>
 					</div>
 				</div>

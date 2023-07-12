@@ -31,7 +31,7 @@ const Gallery = ({ projects }: { projects: Project[] }) => {
 						}
 					}}
 					key={project.id}
-					className="relative w-[0px] h-full flex flex-col justify-center items-center grow opacity-[0.8] mx-[10px] transform duration-[300ms] ease-in-out hover:w-[600px] laptop:hover:w-[400px] hover:opacity-100 bg-featured-projects border-[1px] border-[#838383]"
+					className="relative w-[0px] h-full flex flex-col justify-center items-center grow opacity-[0.8] mx-[10px] transform duration-[300ms] ease-in-out hover:w-[600px] laptop:hover:w-[400px] hover:opacity-100 bg-featured-projects border-[1px] border-[#838383] overflow-clip"
 				>
 					<Image
 						className="m-auto object-contain w-[32vh] h-[32vh] absolute px-[10px]"
@@ -49,8 +49,8 @@ const Gallery = ({ projects }: { projects: Project[] }) => {
 							{project.name}
 						</h1>
 						<p
-							className={`transform duration-[100ms] text-[#949494] text-[16px] leading-[30px] bg-black/90 p-[15px] z-0 ${
-								project.id == activeProject ? "text-[16px]" : "text-[1px]"
+							className={`transform duration-[100ms] text-[#949494] text-[16px] leading-[30px] bg-black/90 p-[15px] z-[-10] ${
+								project.id == activeProject ? "text-[16px]" : ""
 							}`}
 						>
 							{project.description}

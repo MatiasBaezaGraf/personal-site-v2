@@ -108,14 +108,14 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 			/>
 			<a
 				href="mailto:matiasbaezagraf@gmail.com"
-				className="hidden tablet:block"
+				className="hidden tablet:block fixed bottom-0 left-0 h-[48px] w-[48px] mx-[25px] mb-[15px] rounded z-50"
 			>
 				<Image
 					src="/icons/EmailIcon.png"
 					alt="Logo"
 					width={48}
 					height={48}
-					className={`transform duration-[200ms]  fixed bottom-0 left-0 h-[48px] w-[48px] mx-[25px] mb-[15px] z-20
+					className={`transform duration-[200ms]   z-20
 						hover:-translate-y-[5px] hover:scale-110
 						${loaded ? "opacity-100" : "opacity-0 scale-75"}`}
 				/>

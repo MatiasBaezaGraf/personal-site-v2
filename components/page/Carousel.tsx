@@ -4,6 +4,15 @@ import { useState } from "react";
 const Carousel = () => {
 	const [currentTranslationInVW, setcurrentTranslationInVW] = useState(0);
 
+	const [changingSlide, setChangingSlide] = useState(false);
+
+	const slideTransition = () => {
+		setChangingSlide(true);
+		setTimeout(() => {
+			setChangingSlide(false);
+		}, 500);
+	};
+
 	return (
 		<div className="relative h-screen overflow-hidden">
 			<div
@@ -15,19 +24,20 @@ const Carousel = () => {
                 `}
 			>
 				{/* --------------------------------------------------------- Slide 1 ---------------------------------------------------------  */}
-				<div className="h-screen w-screen p-[40px]">
+				<div className="h-screen w-screen laptop:p-[30px]">
 					<div
-						className="h-full w-full bg-cover left-0 shadow-lg shadow-[#191919]
+						className={`transform duration-[300ms] h-full w-full bg-cover left-0 shadow-lg shadow-[#191919]
 					bg-mobile-landscape
 					tablet:bg-tablet-landscape
-					laptop:bg-landscape"
+					laptop:bg-landscape
+					${changingSlide ? "scale-90" : "scale-100"}`}
 					>
 						{/* This div below exists to give a darker background to full screen */}
 						<div
 							className="flex flex-col h-full w-full justify-start bg-[#010010]/60 
 						px-[12px]
 						tablet:px-[100px]
-						laptop:px-[25vw]"
+						laptop:px-[21vw]"
 						>
 							{/* This div below exists to give a darker background to the texts */}
 							<div
@@ -159,13 +169,13 @@ const Carousel = () => {
 					</div>
 				</div>
 				{/* --------------------------------------------------------- Slide 2 ---------------------------------------------------------  */}
-				<div className="h-screen w-screen p-[30px]">
+				<div className="h-screen w-screen laptop:p-[30px]">
 					<div
-						className="h-full w-full bg-cover left-full
+						className={`transform duration-[300ms] h-full w-full bg-cover left-full
 					bg-mobile-landscape2
 					tablet:bg-tablet-landscape2
 					laptop:bg-landscape2
-					"
+					${changingSlide ? "scale-90" : "scale-100"} `}
 					>
 						{/* This div below exists to give a darker background to full screen */}
 						<div
@@ -208,12 +218,12 @@ const Carousel = () => {
 					</div>
 				</div>
 				{/* --------------------------------------------------------- Slide 3 ---------------------------------------------------------  */}
-				<div className="h-screen w-screen p-[30px]">
+				<div className="h-screen w-screen laptop:p-[30px]">
 					<div
-						className="h-full w-full bg-cover left-[200vw]
+						className={`transform duration-[300ms] h-full w-full bg-cover left-[200vw]
 					bg-mobile-landscape3
 					tablet:bg-tablet-landscape3
-					laptop:bg-landscape3"
+					laptop:bg-landscape3 ${changingSlide ? "scale-90" : "scale-100"}`}
 					>
 						{/* This div below exists to give a darker background to full screen */}
 						<div
@@ -278,13 +288,16 @@ const Carousel = () => {
 			{/* ----------------------------------------------------- Carousel Buttons ------------------------------------------------------  */}
 			<div
 				className="absolute w-full flex flex-row justify-between bottom-0 z-30
-				laptop:mb-[50vh] laptop:px-[200px]
+				tablet:mb-[50vh] tablet:px-[50px]
+				laptop:px-[200px]
 			"
 			>
 				<button
+					className="rounded-lg"
 					onClick={() => {
 						if (currentTranslationInVW > 0) {
 							setcurrentTranslationInVW(currentTranslationInVW - 100);
+							slideTransition();
 						}
 					}}
 				>
@@ -304,9 +317,11 @@ const Carousel = () => {
 					</svg>
 				</button>
 				<button
+					className="rounded-lg"
 					onClick={() => {
 						if (currentTranslationInVW < 200) {
 							setcurrentTranslationInVW(currentTranslationInVW + 100);
+							slideTransition();
 						}
 					}}
 				>
@@ -335,6 +350,7 @@ const Carousel = () => {
 				<button
 					onClick={() => {
 						setcurrentTranslationInVW(0);
+						slideTransition();
 					}}
 					className={`rounded-full mx-[25px]  h-[15px] w-[15px] border-[2px] border-orange-600 ${
 						currentTranslationInVW == 0 ? "bg-orange-500" : ""
@@ -343,6 +359,7 @@ const Carousel = () => {
 				<button
 					onClick={() => {
 						setcurrentTranslationInVW(100);
+						slideTransition();
 					}}
 					className={`rounded-full mx-[25px] h-[15px] w-[15px] border-[2px] border-orange-600 ${
 						currentTranslationInVW == 100 ? "bg-orange-500" : ""
@@ -351,6 +368,7 @@ const Carousel = () => {
 				<button
 					onClick={() => {
 						setcurrentTranslationInVW(200);
+						slideTransition();
 					}}
 					className={`rounded-full mx-[25px] h-[15px] w-[15px] border-[2px] border-orange-600 ${
 						currentTranslationInVW == 200 ? "bg-orange-500" : ""
