@@ -4,47 +4,41 @@ const updateProperties = (elem, state) => {
 	elem.style.setProperty("--width", `${state.width}px`);
 	elem.style.setProperty("--height", `${state.height}px`);
 	elem.style.setProperty("--radius", state.radius);
-	elem.style.setProperty("--scale", state.scale);
+	elem.style.setProperty("--border", "none");
+	elem.style.setProperty("border-radius", state.radius);
+	elem.style.setProperty("background", "radial-gradient(#e66465, #9198e500)");
 };
 
 document.querySelectorAll(".cursor").forEach((cursor) => {
-	let onElement;
+	// let onElement;
 
 	const createState = (e) => {
 		const defaultState = {
 			x: e.clientX,
 			y: e.clientY,
-			width: 40,
-			height: 40,
+			width: 90,
+			height: 90,
 			radius: "50%",
 		};
 
-		const computedState = {};
+		// if (onElement != null) {
+		// 	const { top, left, width, height } = onElement.getBoundingClientRect();
+		// 	const radius = window.getComputedStyle(onElement).borderTopLeftRadius;
 
-		if (onElement != null) {
-			const { top, left, width, height } = onElement.getBoundingClientRect();
-			const radius = window.getComputedStyle(onElement).borderTopLeftRadius;
-
-			computedState.x = left + width / 2;
-			computedState.y = top + height / 2;
-			computedState.width = width;
-			computedState.height = height;
-			computedState.radius = radius;
-		}
+		// 	computedState.x = left + width / 2;
+		// 	computedState.y = top + height / 2;
+		// 	computedState.width = width;
+		// 	computedState.height = height;
+		// 	computedState.radius = radius;
+		// }
 
 		return {
 			...defaultState,
-			...computedState,
 		};
 	};
 
 	document.addEventListener("mousemove", (e) => {
 		const state = createState(e);
 		updateProperties(cursor, state);
-	});
-
-	document.querySelectorAll("a, button").forEach((elem) => {
-		elem.addEventListener("mouseenter", () => (onElement = elem));
-		elem.addEventListener("mouseleave", () => (onElement = undefined));
 	});
 });
