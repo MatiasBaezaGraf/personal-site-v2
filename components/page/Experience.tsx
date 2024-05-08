@@ -164,8 +164,9 @@ const Experience = () => {
 								width={10}
 								height={10}
 							/>
-							Worked in support roles on several of the company's projects and
-							teams, always with Javascript frameworks such as React and Vue.
+							Worked in support roles on several of the company&apos;s projects
+							and teams, always with Javascript frameworks such as React and
+							Vue.
 						</p>
 					</div>
 				</div>
