@@ -6,7 +6,10 @@ const updateProperties = (elem, state) => {
 	elem.style.setProperty("--radius", state.radius);
 	elem.style.setProperty("--border", "none");
 	elem.style.setProperty("border-radius", state.radius);
-	elem.style.setProperty("background", "radial-gradient(#e66465, #9198e500)");
+	elem.style.setProperty(
+		"background",
+		"radial-gradient(#ff660099 0%, #02002400 70%)"
+	);
 };
 
 document.querySelectorAll(".cursor").forEach((cursor) => {
@@ -16,8 +19,8 @@ document.querySelectorAll(".cursor").forEach((cursor) => {
 		const defaultState = {
 			x: e.clientX,
 			y: e.clientY,
-			width: 90,
-			height: 90,
+			width: 120,
+			height: 120,
 			radius: "50%",
 		};
 

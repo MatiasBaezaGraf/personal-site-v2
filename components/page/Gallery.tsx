@@ -14,7 +14,7 @@ const Gallery = ({ projects }: { projects: Project[] }) => {
 	const [entertimeoutId, setEnterTimeoutId] = useState<any | null>(null);
 
 	return (
-		<section className="hidden laptop:flex desktop:w-[1700px] laptop:w-[1400px] h-[500px]">
+		<section className="hidden laptop:flex desktop:w-[1700px] laptop:w-[1400px] h-[500px] z-[25]">
 			{orderedProjects.map((project) => (
 				<div
 					onMouseEnter={() => {

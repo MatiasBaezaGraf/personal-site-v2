@@ -88,7 +88,7 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				<IntroAnimation onStopPlaying={loadIn} />
 			</div>
 
-			{/* <div className="cursor"></div> */}
+			<div className="cursor"></div>
 			{/* Fixed elements */}
 			<div
 				id="particles-js"
@@ -124,7 +124,7 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 
 			<main
 				id="main-container"
-				className={`${loaded ? "block" : "hidden"} bg-[#010010] z-20`}
+				className={`${loaded ? "block" : "hidden"} bg-[#010010] z-[25]`}
 			>
 				{/* ------------------------------------------------------------- Home ------------------------------------------------------------- */}
 				<div
@@ -144,7 +144,7 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 						Welcome! My name is
 					</h4>
 					<h1
-						className={`font-primary-bold leading-none text-[#DBDBDB]  mt-[15px] text-[40px] tablet:text-[60px] 
+						className={`font-primary-bold leading-none text-[#DBDBDB]  mt-[15px] text-[40px] tablet:text-[60px]  
 						transform delay-[200ms] duration-[400ms] ${
 							loadPage ? "opacity-100" : "opacity-0 -translate-y-[10px]"
 						}`}
@@ -254,9 +254,9 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 				</div>
 				{/* ------------------------------------------------------------- Experience ------------------------------------------------------------- */}
 
-				<div id="experience" className="h-screen">
+				<div id="experience" className="h-screen z-[25]">
 					<h1
-						className="font-primary-bold text-[#DEDEDE] 
+						className="font-primary-bold text-[#DEDEDE]
 						px-[12px] text-[36px] pt-[90px] pb-[50px] 
 						tablet:px-[100px] tablet:text-[48px]
 						laptop:px-[25vw] laptop:text-[36px] laptop:pt-[140px] laptop:pb-[70px]

@@ -73,7 +73,7 @@ const FeaturedProjects = ({ projects }: { projects: Project[] }) => {
 					</div> */}
 
 					{/* Mobile View */}
-					<div className="laptop:hidden relative mb-[30px] px-[20px] tablet:px-[90px]">
+					<div className="laptop:hidden relative mb-[30px] px-[20px] tablet:px-[90px] z-[25]">
 						<div className="relative flex flex-col top-0 left-0 w-full h-full z-10 bg-featured-projects tablet:bg-featured-tablet-projects border-[#838383] border-[2px] p-[15px]">
 							<h1 className="font-primary-bold text-[#DEDEDE] text-[32px]">
 								{project.name}

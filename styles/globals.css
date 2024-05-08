@@ -10,6 +10,10 @@ div::-webkit-scrollbar {
 	display: none;
 }
 
+h1 {
+	z-index: 100;
+}
+
 @font-face {
 	font-family: "ExtraBold";
 	src: url("/fonts/Inter-ExtraBold.ttf");
@@ -255,7 +259,7 @@ select:-webkit-autofill:focus {
 @media (pointer: fine) {
 	.cursor {
 		display: block;
-		z-index: 50;
+		z-index: 20;
 	}
 }
 .cursor::after {
@@ -265,8 +269,6 @@ select:-webkit-autofill:focus {
 	left: 0;
 	right: 0;
 	bottom: 0;
-	border-radius: var(--radius);
-	border: 2px solid #ff8000;
 	opacity: var(--scale);
 	-webkit-transform: scale(var(--scale));
 	transform: scale(var(--scale));

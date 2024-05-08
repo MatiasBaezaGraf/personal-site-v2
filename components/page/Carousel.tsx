@@ -14,7 +14,7 @@ const Carousel = () => {
 	};
 
 	return (
-		<div className="relative h-screen overflow-hidden">
+		<div className="relative h-screen overflow-hidden z-[29]">
 			<div
 				className={`transform duration-[700ms] ease-in-out flex flex-row w-[300vw] h-full 
                 ${currentTranslationInVW == 0 && "translate-x-0"}

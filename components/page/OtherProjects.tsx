@@ -7,8 +7,8 @@ const OtherProjects = ({ projects }: { projects: Project[] }) => {
 		(a, b) => parseInt(a.id) - parseInt(b.id)
 	);
 	return (
-		<div
-			className="transform duration-[200ms] grid-cols-2 
+		<section
+			className="transform duration-[200ms] grid-cols-2
 			tablet:gap-[10px] tablet:grid 
 			desktop:grid-cols-3 
 			laptop:gap-[30px]"
@@ -17,12 +17,12 @@ const OtherProjects = ({ projects }: { projects: Project[] }) => {
 				<div key={project.id}>
 					{/* Desktop View */}
 					<div
-						className="transform duration-[200ms] relative h-full
+						className="transform duration-[200ms] relative h-full  z-[25]
 						hidden
 						laptop:block 
 						hover:scale-105"
 					>
-						<div className="relative flex flex-col justify-between top-0 left-0 w-full h-full z-10 bg-[#030120] border-[#838383] border-[1px]">
+						<div className="relative flex flex-col justify-between top-0 left-0 w-full h-full bg-[#030120] border-[#838383] border-[1px] ">
 							<div className=" p-[20px]">
 								<h1 className="font-primary-bold text-[#DEDEDE] text-[22px] w-5/6">
 									{project.name}
@@ -93,7 +93,7 @@ const OtherProjects = ({ projects }: { projects: Project[] }) => {
 					</div>
 				</div>
 			))}
-		</div>
+		</section>
 	);
 };
 
