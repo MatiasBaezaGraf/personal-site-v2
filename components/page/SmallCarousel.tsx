@@ -7,7 +7,7 @@ const SmallCarousel = () => {
 	return (
 		<div className="laptop:hidden relative overflow-hidden">
 			<div
-				className={`transform duration-[500ms] flex flex-row w-[300vw]
+				className={`transform duration-[500ms] flex flex-row w-[400vw]
                 ${currentTranslationInVW == 0 && "translate-x-0"}
                 ${currentTranslationInVW == 100 && "translate-x-[-100vw]"}
                 ${currentTranslationInVW == 200 && "translate-x-[-200vw]"}
@@ -90,7 +90,7 @@ const SmallCarousel = () => {
 				</div>
 				{/* -------------------------------- Slide 2 - Lightning Team -------------------------------- */}
 				<div
-					className="flex flex-col w-screen bg-cover left-0 
+					className="flex flex-col w-screen bg-cover left-[100vw] 
 					px-[12px]
 					tablet:px-[100px]
 					
@@ -171,7 +171,7 @@ const SmallCarousel = () => {
 				</div>
 				{/* -------------------------------- Slide 3 - Universidad Adventista del Plata -------------------------------- */}
 				<div
-					className="flex flex-col w-screen bg-cover left-full 
+					className="flex flex-col w-screen bg-cover left-full
 					px-[12px]
 					tablet:px-[100px]
 					"
@@ -248,7 +248,7 @@ const SmallCarousel = () => {
 				</div>
 				{/* -------------------------------- Slide 4 - Freelance -------------------------------- */}
 				<div
-					className="flex flex-col w-screen bg-cover left-[200vw] 
+					className="flex flex-col w-screen bg-cover left-[300vw] 
 					px-[12px]
 					tablet:px-[100px]
 					"
