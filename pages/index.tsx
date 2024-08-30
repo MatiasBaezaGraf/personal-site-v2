@@ -167,10 +167,8 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 					>
 						Hello there! I’m a Software Engineer born, raised and based in
 						Argentina. I love software development and I’m always willing to
-						learn new ways to do so. Currently developing solutions with{" "}
-						<a target="_blank" href="https://www.xirect.com/">
-							<span className="text-gradient">Xirect Software Solutions.</span>
-						</a>
+						learn new ways to do so. Currently seeking new opportunities to
+						contribute and grow as a Developer and Engineer.
 					</p>
 					<div
 						className={`bg-main-gradient p-[2px] rounded-[3px] w-[200px] h-[64px] mt-[30px]
@@ -217,7 +215,7 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 								className="object-contain [h-25px] w-[25px] mx-[14px]"
 							/>
 						</a>
-						<a
+						{/* <a
 							className="z-20 laptop:hidden"
 							target="_blank"
 							href="https://twitter.com/matibaezagraf"
@@ -229,7 +227,7 @@ const Home = ({ projects, images }: { projects: Project[]; images: any[] }) => {
 								height={25}
 								className="object-contain [h-25px] w-[25px] mx-[14px]"
 							/>
-						</a>
+						</a> */}
 
 						<a
 							className="z-20 laptop:hidden"

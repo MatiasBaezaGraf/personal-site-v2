@@ -21,7 +21,7 @@ var pJS = function (tag_id, params) {
 		},
 		particles: {
 			number: {
-				value: 400,
+				value: 300,
 				density: {
 					enable: true,
 					value_area: 800,
@@ -871,8 +871,7 @@ var pJS = function (tag_id, params) {
 				init();
 			}
 		} else if (
-
-		/* on click event */
+			/* on click event */
 			pJS.interactivity.events.onclick.enable &&
 			isInArray("bubble", pJS.interactivity.events.onclick.mode)
 		) {

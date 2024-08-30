@@ -81,7 +81,7 @@ const Carousel = () => {
 											width={10}
 											height={10}
 										/>
-										Next JS
+										Next.js
 									</h1>
 									<h1 className="flex flex-row items-center my-[2px]">
 										<Image
@@ -101,7 +101,7 @@ const Carousel = () => {
 											width={10}
 											height={10}
 										/>
-										Velo by Wix
+										NestJS
 									</h1>
 									<h1 className="flex flex-row items-center my-[2px]">
 										<Image
@@ -131,7 +131,7 @@ const Carousel = () => {
 											width={10}
 											height={10}
 										/>
-										PostgreSQL
+										PostgreSQL & MySQL
 									</h1>
 									<h1 className="flex flex-row items-center my-[2px]">
 										<Image
@@ -203,13 +203,13 @@ const Carousel = () => {
 								</p>
 								<p className="font-primary-regular text-[16px] text-[#838383] pt-[15px] ">
 									But of course, I have hobbies coming out of everything related
-									to software development. In my free time I like to play
+									to software development. In my free time I love to play
 									videogames, watch movies and series, especially Star Wars.
 								</p>
 								<p className="font-primary-regular text-[16px] text-[#838383] pt-[15px]">
 									<span className="text-gradient">Phyisical activity</span> is a
 									very important part of my life. I love sports, especially
-									soccer and volleyball. I also really enjoy going for a run,
+									football and volleyball. I also really enjoy going for a run,
 									cycling or just a walk, and if I find myself in a mountainous
 									area, I love hiking.
 								</p>
@@ -241,9 +241,9 @@ const Carousel = () => {
 							>
 								<p className="font-primary-regular text-[16px] text-[#838383]">
 									Another thing I love is the trips we make with my family. My
-									parents, my two brothers and I, love traveling to the
-									Patagonia, where there are a lot of mountains and the most
-									beautiful natural places I have ever been in my life.{" "}
+									beautiful wife, parents, my two brothers and I love traveling
+									to the Patagonia, where there are a lot of mountains and the
+									most beautiful natural places I have ever been in my life.{" "}
 								</p>
 								<p className="font-primary-regular text-[16px] text-[#838383] pt-[15px]">
 									We love camping, hiking, and discovering new trails, lakes or

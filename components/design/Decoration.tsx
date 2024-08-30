@@ -33,7 +33,7 @@ const Decoration = ({ className }: { className?: string }) => {
 					className="transform duration-[200ms]  hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
 				/>
 			</a>
-			<a
+			{/* <a
 				className="z-20 py-[20px] rounded-full"
 				target="_blank"
 				href="https://twitter.com/matibaezagraf"
@@ -45,7 +45,7 @@ const Decoration = ({ className }: { className?: string }) => {
 					height={20}
 					className="transform duration-[200ms]  hover:scale-110 object-contain h-[20px] w-[20px] mx-[14px]"
 				/>
-			</a>
+			</a> */}
 
 			<a
 				className="z-20 py-[20px] rounded-full"
